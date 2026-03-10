@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IAL A2 Economics | Unit 4 Ch.6 — Economic Growth &amp; Development</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#faf8f4;--bg2:#f3f0ea;--surface:#ffffff;--accent:#1b5cb5;--accent2:#7b1bb5;--accent3:#b5451b;--green:#1a7a3f;--red:#b51b1b;--text:#1a1810;--text2:#3d3a30;--muted:#8a8070;--border:#ddd9d0;--border2:#c8c3b8;}
+  *{margin:0;padding:0;box-sizing:border-box;}body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.75;}
+  #gate{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;}
+  .gate-rule{width:3rem;height:1.5px;background:var(--accent);}.gate-label{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;}
+  .gate-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5.5vw,3.5rem);font-weight:700;text-align:center;line-height:1.05;}.gate-title em{color:var(--accent);font-style:italic;}
+  .gate-sub{color:var(--muted);font-size:.88rem;text-align:center;max-width:320px;}
+  .gate-input-wrap{display:flex;gap:.65rem;align-items:center;background:var(--surface);border:1.5px solid var(--border2);padding:.7rem 1.1rem;border-radius:3px;width:300px;margin-top:.5rem;}.gate-input-wrap:focus-within{border-color:var(--accent);}
+  #pwInput{background:none;border:none;outline:none;color:var(--text);font-family:'DM Mono',monospace;font-size:.95rem;flex:1;letter-spacing:.12em;}#pwInput::placeholder{color:var(--muted);font-size:.82rem;letter-spacing:.04em;}
+  #pwBtn{background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'DM Mono',monospace;font-size:.72rem;padding:.38rem .85rem;border-radius:2px;letter-spacing:.07em;text-transform:uppercase;}#pwBtn:hover{opacity:.85;}
+  #pwError{color:var(--red);font-size:.78rem;font-family:'DM Mono',monospace;display:none;}#content{display:none;}
+  nav{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.96);backdrop-filter:blur(12px);border-bottom:1.5px solid var(--border2);padding:0 2.5rem;display:flex;align-items:center;gap:1.5rem;height:54px;overflow-x:auto;}
+  nav .logo{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;font-weight:500;}
+  nav .unit-tag{font-family:'DM Mono',monospace;font-size:.62rem;background:var(--accent);color:#fff;padding:.18rem .6rem;border-radius:2px;white-space:nowrap;}
+  nav a{font-size:.72rem;color:var(--muted);text-decoration:none;white-space:nowrap;font-weight:500;transition:color .2s;}nav a:hover{color:var(--accent);}
+  .hero{padding:4.5rem 2.5rem 3.5rem;max-width:960px;margin:0 auto;border-bottom:1px solid var(--border);}
+  .hero-eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;}.eyebrow-line{width:2.5rem;height:1.5px;background:var(--accent);}.eyebrow-text{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;}
+  h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:700;line-height:1.0;letter-spacing:-.01em;margin-bottom:1.25rem;}h1 em{color:var(--accent);font-style:italic;}
+  .hero-sub{color:var(--muted);font-size:.95rem;max-width:530px;line-height:1.7;}.hero-meta{display:flex;gap:1.5rem;margin-top:2rem;flex-wrap:wrap;}.meta-pill{font-family:'DM Mono',monospace;font-size:.63rem;color:var(--text2);border:1px solid var(--border2);padding:.3rem .75rem;border-radius:20px;}
+  main{max-width:960px;margin:0 auto;padding:0 2.5rem 6rem;}
+  .section-block{margin-bottom:3rem;border:1.5px solid var(--border);border-radius:4px;overflow:hidden;background:var(--surface);}
+  .section-header{background:var(--bg2);padding:1.1rem 1.75rem;display:flex;align-items:center;gap:1rem;border-bottom:1.5px solid var(--border);cursor:pointer;user-select:none;transition:background .15s;}.section-header:hover{background:var(--bg);}
+  .section-num{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--accent);background:rgba(27,92,181,.1);padding:.22rem .55rem;border-radius:3px;white-space:nowrap;font-weight:500;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;flex:1;}.toggle-icon{font-size:1rem;color:var(--muted);transition:transform .3s;}.section-body{padding:1.75rem 2rem;}
+  h2{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--accent);margin:1.9rem 0 .8rem;padding-bottom:.35rem;border-bottom:1.5px solid var(--border);display:flex;align-items:center;gap:.75rem;font-weight:600;}h2:first-child{margin-top:0;}h2::before{content:'';display:block;width:3px;height:1rem;background:var(--accent);flex-shrink:0;border-radius:2px;}
+  h3{font-size:.83rem;color:var(--accent3);font-weight:600;margin:1.1rem 0 .45rem;text-transform:uppercase;letter-spacing:.09em;}
+  p{color:var(--text2);font-size:.9rem;margin-bottom:.65rem;line-height:1.75;}ul,ol{padding-left:1.3rem;margin:.5rem 0 .65rem;}li{color:var(--text2);font-size:.88rem;margin-bottom:.32rem;line-height:1.7;}
+  .def-box{background:rgba(27,92,181,.05);border-left:3px solid var(--accent);padding:.75rem 1.1rem;margin:.65rem 0;border-radius:0 3px 3px 0;font-size:.86rem;color:var(--text2);}.def-box strong{color:var(--accent);}
+  .exam-tip{background:rgba(181,69,27,.05);border-left:3px solid var(--accent3);padding:.75rem 1.1rem;margin:.65rem 0;border-radius:0 3px 3px 0;font-size:.86rem;color:var(--text2);}.exam-tip::before{content:'★ EXAM TIP — ';font-weight:700;color:var(--accent3);font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.06em;}
+  .table-wrap{overflow-x:auto;margin:.9rem 0;}table{width:100%;border-collapse:collapse;font-size:.82rem;}th{background:var(--bg2);color:var(--accent);font-family:'DM Mono',monospace;font-size:.67rem;letter-spacing:.09em;text-transform:uppercase;padding:.65rem .9rem;text-align:left;border-bottom:2px solid var(--border2);font-weight:500;}td{padding:.6rem .9rem;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top;font-size:.84rem;}tr:hover td{background:var(--bg2);}td:first-child{color:var(--text);font-weight:500;}
+  .formula{font-family:'DM Mono',monospace;background:var(--bg2);border:1.5px solid var(--border2);padding:.85rem 1.25rem;margin:.65rem 0;font-size:.84rem;border-radius:3px;color:var(--accent2);}.formula span{color:var(--muted);font-size:.72rem;}
+  .pro-con{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin:.9rem 0;}.pro{background:rgba(26,122,63,.05);border:1.5px solid rgba(26,122,63,.2);padding:.9rem 1rem;border-radius:3px;}.pro strong{color:var(--green);display:block;margin-bottom:.45rem;font-size:.69rem;letter-spacing:.1em;text-transform:uppercase;font-family:'DM Mono',monospace;}.con{background:rgba(181,27,27,.05);border:1.5px solid rgba(181,27,27,.18);padding:.9rem 1rem;border-radius:3px;}.con strong{color:var(--red);display:block;margin-bottom:.45rem;font-size:.69rem;letter-spacing:.1em;text-transform:uppercase;font-family:'DM Mono',monospace;}.pro li,.con li{margin-left:1.1rem;margin-bottom:.28rem;color:var(--text2);font-size:.84rem;}
+  .question-card{background:var(--surface);border:1.5px solid var(--border);border-radius:3px;margin-bottom:1.2rem;overflow:hidden;}.q-header{padding:.9rem 1.35rem;background:var(--bg2);display:flex;align-items:center;gap:.9rem;border-bottom:1.5px solid var(--border);cursor:pointer;flex-wrap:wrap;}.q-header:hover{background:rgba(27,92,181,.04);}.q-marks{font-family:'DM Mono',monospace;font-size:.65rem;background:rgba(27,92,181,.12);color:var(--accent);padding:.18rem .52rem;border-radius:3px;white-space:nowrap;}.q-text{font-size:.88rem;color:var(--text);flex:1;font-weight:500;}.q-body{padding:1.35rem;display:none;border-top:1.5px solid var(--border);}.q-body.open{display:block;}
+  .answer-section h4{font-size:.69rem;color:var(--accent2);font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.65rem;}.mark-scheme{background:rgba(123,27,181,.04);border-left:3px solid var(--accent2);padding:.75rem 1.1rem;margin-top:.9rem;border-radius:0 3px 3px 0;font-size:.83rem;color:var(--text2);}.mark-scheme strong{color:var(--accent2);font-family:'DM Mono',monospace;font-size:.7rem;}
+  .essay-plan{background:rgba(123,27,181,.03);border:1.5px solid rgba(123,27,181,.15);border-radius:4px;padding:1.35rem 1.5rem;margin-bottom:1.1rem;}.ep-title{font-family:'DM Mono',monospace;font-size:.67rem;color:var(--accent2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;}.ep-q{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:.9rem;line-height:1.4;}.ep-row{display:flex;gap:.85rem;margin-bottom:.55rem;font-size:.83rem;}.ep-label{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--accent2);text-transform:uppercase;letter-spacing:.07em;min-width:90px;padding-top:.1rem;flex-shrink:0;}.ep-content{color:var(--text2);line-height:1.65;}.econ-badge{display:inline-block;background:rgba(27,92,181,.08);color:var(--accent);font-family:'DM Mono',monospace;font-size:.62rem;padding:.15rem .48rem;border-radius:3px;margin:.1rem .2rem .1rem 0;}
+  @media(max-width:640px){.hero{padding:3rem 1.25rem 2.5rem;}main{padding:0 1.25rem 4rem;}.section-body{padding:1.25rem;}.pro-con{grid-template-columns:1fr;}nav{padding:0 1.25rem;}}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="gate-rule"></div>
+  <div class="gate-label">EcoNotes · Unit 4 · Chapter 6</div>
+  <div class="gate-title">Growth &amp;<br><em>Development</em></div>
+  <div class="gate-sub">Enter your access password to unlock this chapter.</div>
+  <div class="gate-input-wrap"><input id="pwInput" type="password" placeholder="Enter password..." autocomplete="off"><button id="pwBtn" onclick="checkPw()">Unlock</button></div>
+  <div id="pwError">✕ Incorrect password — check your order confirmation.</div>
+</div>
+
+<div id="content">
+<nav>
+  <span class="logo">EcoNotes</span><span class="unit-tag">Unit 4 · Ch.6</span>
+  <a href="#growth-dev">Growth vs Development</a>
+  <a href="#hdi">HDI &amp; Measures</a>
+  <a href="#models">Development Models</a>
+  <a href="#strategies">Strategies</a>
+  <a href="#institutions">Institutions</a>
+  <a href="#aid">Aid &amp; Debt</a>
+  <a href="#past-papers">Past Papers</a>
+  <a href="#essay-plans">Essay Plans</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">IAL A2 Economics · Unit 4 · 4.3.6</div></div>
+  <h1>Economic Growth<br>&amp; <em>Development</em></h1>
+  <p class="hero-sub">HDI, Harrod-Domar, Lewis dual-sector model, Prebisch-Singer, market vs interventionist strategies, institutions, aid and debt relief — the complete development economics toolkit.</p>
+  <div class="hero-meta">
+    <span class="meta-pill">4.3.6 Full Spec Coverage</span>
+    <span class="meta-pill">Harrod-Domar · Lewis · Rostow</span>
+    <span class="meta-pill">Sachs · Acemoglu · Easterly</span>
+    <span class="meta-pill">10 × 20-Mark Essay Plans</span>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══ SECTION 1 ═══ -->
+<div class="section-block" id="growth-dev">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.6a</span>
+    <span class="section-title">Economic Growth vs Economic Development</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>The Core Distinction</h2>
+    <div class="def-box"><strong>Economic growth:</strong> An increase in a country's real GDP (or real GDP per capita) over time — the expansion of output. A narrow, quantitative measure.</div>
+    <div class="def-box"><strong>Economic development:</strong> A broader improvement in human welfare: rising living standards, reduced poverty, improved health, better education, greater freedom and security, reduced inequality. Requires growth but growth alone does not guarantee it.</div>
+    <p>Growth is <em>necessary but insufficient</em> for development. High GDP per capita can co-exist with extreme poverty, low life expectancy, and constrained freedoms — the "growth without development" problem. Key example: Gulf oil states had rapidly rising GDP per capita but excluded migrant workers from most development gains, and political freedoms remained severely restricted.</p>
+    <p>Amartya Sen (<em>Development as Freedom</em>, 1999): development is the expansion of real freedoms — political freedoms, economic facilities, social opportunities, transparency guarantees, and protective security. Income is an instrument, not the end goal.</p>
+
+    <h2>Why GDP Per Capita Understates or Misrepresents Development</h2>
+    <ul>
+      <li><strong>Ignores distribution:</strong> A Gini of 0.6 means the average may be high while the poor see no gain. Real median income matters more than mean.</li>
+      <li><strong>Ignores non-income welfare:</strong> Health outcomes, years of schooling, political freedom, and environmental quality are not captured in GDP.</li>
+      <li><strong>Informal economy:</strong> Subsistence agriculture and informal sector output are excluded — understates real living standards in many LDCs.</li>
+      <li><strong>Environmental degradation:</strong> Extracting natural resources raises GDP while depleting natural capital — future productive capacity falls even as current GDP rises.</li>
+      <li><strong>GNI vs GDP:</strong> For countries with large foreign ownership of productive assets, GDP overstates residents' income. Ireland's GDP exceeds GNI by ~20% because multinational profits are repatriated — GDP overstates Irish living standards.</li>
+    </ul>
+    <div class="exam-tip">The growth vs development distinction is one of the most frequently examined Unit 4 concepts. Always lead with Amartya Sen's capabilities approach for the "development" definition — it signals to the examiner that you understand the distinction at a conceptual level. Then give a concrete example: "Saudi Arabia has high GDP per capita but ranks significantly lower on HDI due to restrictions on political freedom and high inequality."</div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 2 ═══ -->
+<div class="section-block" id="hdi">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.6b</span>
+    <span class="section-title">Measures of Development — HDI &amp; Beyond</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>Human Development Index (HDI)</h2>
+    <div class="def-box"><strong>HDI:</strong> Composite index created by Mahbub ul Haq and Amartya Sen for the UNDP (1990). Three dimensions: (1) <strong>Health</strong> — life expectancy at birth; (2) <strong>Education</strong> — mean years of schooling + expected years of schooling; (3) <strong>Standard of living</strong> — GNI per capita at PPP. Each dimension is normalised 0–1.</div>
+    <div class="formula">HDI = ∛(Health Index × Education Index × Income Index) <span>— geometric mean; ranges 0 (lowest) to 1 (highest)</span></div>
+    <p>Classification: Very High (&gt;0.800), High (0.700–0.799), Medium (0.550–0.699), Low (&lt;0.550). Norway leads (~0.966); Niger is near the bottom (~0.394).</p>
+
+    <h3>Key Advantage: It Reveals Divergence from GDP Rankings</h3>
+    <ul>
+      <li><strong>Outperformers on HDI vs GDP:</strong> Cuba, Sri Lanka, and Vietnam rank higher on HDI than their income rank suggests — they invested heavily in health and education despite modest incomes.</li>
+      <li><strong>Underperformers on HDI vs GDP:</strong> Some oil-rich states (Equatorial Guinea, Angola) have higher GDP per capita than their HDI suggests — resource revenues are not translated into broad human development.</li>
+    </ul>
+
+    <h3>Limitations of HDI</h3>
+    <ul>
+      <li><strong>Ignores within-country inequality:</strong> The IHDI (Inequality-adjusted HDI) corrects for this — HDI falls when inequality is high, but data is less available.</li>
+      <li><strong>Equal weighting is arbitrary:</strong> Why weight health, education, and income equally? A dying patient with a PhD values health more than income.</li>
+      <li><strong>Omits political freedom, gender equality, environmental sustainability</strong> — all important dimensions of development.</li>
+      <li><strong>Data reliability:</strong> Reported life expectancy and schooling figures may be inaccurate in countries with weak statistical capacity.</li>
+    </ul>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Measure</th><th>What it captures</th><th>Key limitation</th></tr></thead>
+        <tbody>
+          <tr><td>GDP per capita (PPP)</td><td>Average income and purchasing power</td><td>Ignores distribution, non-income welfare</td></tr>
+          <tr><td>HDI</td><td>Income + health + education</td><td>Ignores inequality, freedom, environment</td></tr>
+          <tr><td>IHDI</td><td>HDI discounted by inequality in each dimension</td><td>Data limited in many LDCs</td></tr>
+          <tr><td>MPI (Multidimensional Poverty)</td><td>Multiple simultaneous deprivations</td><td>Threshold choices are arbitrary</td></tr>
+          <tr><td>Gini coefficient</td><td>Income inequality within a country</td><td>Doesn't capture absolute living standards</td></tr>
+          <tr><td>Gender Inequality Index</td><td>Reproductive health, empowerment, labour market gaps by gender</td><td>Does not capture violence or unpaid care work</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="exam-tip">For 8-mark "explain" questions on development measures: (1) define the measure precisely with formula/components, (2) give a real-world example of a country that ranks differently on it vs GDP per capita, (3) identify one specific limitation and explain why it matters. This structure reliably earns 6–8 marks.</div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 3 ═══ -->
+<div class="section-block" id="models">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.6c</span>
+    <span class="section-title">Development Models — Harrod-Domar, Lewis, Rostow, Prebisch-Singer</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>Harrod-Domar Growth Model</h2>
+    <div class="def-box"><strong>Harrod-Domar (Roy Harrod 1939, Evsey Domar 1946):</strong> GDP growth depends on the savings rate (s) and the capital-output ratio (k). Higher savings finance investment; investment adds capital; capital raises output. The main constraint on growth in developing countries is insufficient savings to finance needed investment.</div>
+    <div class="formula">Growth rate (g) = s / k <span>— where s = savings rate (%), k = capital-output ratio (units of capital per unit of GDP)</span></div>
+    <p><strong>Example:</strong> If s = 12% and k = 4, then g = 3%. To achieve 5% growth with k = 4, the economy needs s = 20%. If domestic savings only produce s = 10%, there is a "financing gap" of 10% of GDP — which must be filled by foreign aid, FDI, or external borrowing.</p>
+    <p><strong>Policy implication (Sachs, 2005):</strong> Foreign aid can plug the savings/financing gap and escape the poverty trap by funding the investment needed for self-sustaining growth. This was the theoretical foundation for large-scale development aid programmes in the 1950s–70s.</p>
+
+    <h3>Evaluation of Harrod-Domar</h3>
+    <div class="pro-con">
+      <div class="pro">
+        <strong>✓ Strengths</strong>
+        <ul>
+          <li>Correctly identifies investment as central to growth</li>
+          <li>Provides clear quantifiable policy target (savings rate needed)</li>
+          <li>Justifies external finance (aid, FDI) for poor countries</li>
+          <li>Simple, tractable — widely used by multilaterals</li>
+        </ul>
+      </div>
+      <div class="con">
+        <strong>✗ Limitations</strong>
+        <ul>
+          <li>Fixed k: ignores TFP — most long-run growth is technology-driven (Solow 1956)</li>
+          <li>Investment ≠ growth: needs absorptive capacity, good institutions, human capital</li>
+          <li>Easterly (2001): aid-funded investment has not reliably raised growth</li>
+          <li>Ignores diminishing returns to capital — can't explain long-run growth</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>W. Arthur Lewis: Dual-Sector Model (1954)</h2>
+    <div class="def-box"><strong>Lewis dual-sector model:</strong> Developing economies have two sectors: (1) a <strong>traditional agricultural sector</strong> with surplus labour (workers at subsistence wage, marginal product ≈ 0); (2) a <strong>modern industrial sector</strong> that can absorb this labour at a wage slightly above subsistence. As capitalists reinvest profits, the industrial sector expands, drawing more labour from agriculture. Development = structural transformation from agriculture to industry.</div>
+    <p>The <strong>Lewis turning point</strong>: the moment when all surplus agricultural labour is absorbed into industry. At this point, further labour reallocation requires real wage increases — ending the era of cheap labour-driven growth. China is widely cited as having approached or reached this turning point in the 2000s–2010s, explaining rising Chinese wages and the shift to more consumption-driven growth.</p>
+
+    <h3>Evaluation of Lewis</h3>
+    <ul>
+      <li><strong>Empirically powerful:</strong> Describes East Asian industrialisation well — Japan (1950s–60s), South Korea (1960s–80s), China (1980s–2010s) all followed a Lewis-type structural transformation path.</li>
+      <li><strong>Agricultural MLP assumption:</strong> The Green Revolution raised agricultural productivity dramatically — the surplus labour assumption is empirically weaker. Agricultural growth can itself drive development.</li>
+      <li><strong>Profit repatriation:</strong> If the industrial sector is dominated by foreign MNCs, profits are repatriated rather than reinvested locally — breaking the reinvestment mechanism.</li>
+      <li><strong>Urban poverty traps (Harris-Todaro, 1970):</strong> Migration creates urban slums if industrial job creation is slower than rural-urban migration. Expected urban wages (probability of employment × wage) must equal rural wages for equilibrium — but en route, large urban unemployment can emerge.</li>
+    </ul>
+
+    <h2>Rostow's Stages of Economic Growth (1960)</h2>
+    <div class="def-box"><strong>Rostow's five stages:</strong> (1) Traditional society; (2) Preconditions for take-off (transport infrastructure, agricultural surplus, entrepreneurial class emerges); (3) <strong>Take-off</strong> — investment rate rises above 10%, rapid industrialisation; (4) Drive to maturity (technology spreads, diversification); (5) Age of high mass consumption (consumer goods dominate, high living standards). All countries follow this linear sequence.</div>
+    <p><strong>Evaluation:</strong> Too linear — assumes all countries follow the Western path. Ignores institutional variation and path dependence. Criticised as Cold War ideology — presenting capitalism as the only route to development, countering Soviet central planning. Contradicted by East Asian development experience, which used heavy state direction rather than free markets. Chang (2002): today's developed nations "kicked away the ladder" of state intervention that they themselves used.</p>
+
+    <h2>Prebisch-Singer Hypothesis (1950)</h2>
+    <div class="def-box"><strong>Prebisch-Singer hypothesis:</strong> Primary commodity export prices decline relative to manufactured goods prices over the long run, because: (1) income elasticity of demand for commodities is low — demand grows slowly as incomes rise (Engels' Law); (2) technological progress in commodities reduces prices rather than raising wages; (3) manufacturing workers capture productivity gains through union bargaining, while agricultural workers cannot. Result: terms of trade deteriorate structurally for commodity exporters.</div>
+    <p><strong>Policy implication — Import Substitution Industrialisation (ISI):</strong> Rather than specialising in commodities, developing countries should use tariffs and subsidies to protect infant industries and diversify into manufacturing. Implemented in Latin America (1950s–70s): Brazil, Mexico, Argentina. Mixed results — some industries developed, but many became permanently inefficient and subsidy-dependent, contributing to debt crises in the 1980s.</p>
+    <div class="exam-tip">Prebisch-Singer is essential for any essay on developing country trade, comparative advantage, or growth strategy. Key evaluation: commodity prices experienced a "super-cycle" of rising prices in the 2000s (driven by Chinese demand), temporarily contradicting the hypothesis. But since ~2011 commodity prices have fallen again. The long-run trend remains broadly consistent with the hypothesis, but the timing and magnitude vary significantly.</div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 4 ═══ -->
+<div class="section-block" id="strategies">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.6d</span>
+    <span class="section-title">Market-Led vs Interventionist Development Strategies</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>The Washington Consensus (Market-Led)</h2>
+    <div class="def-box"><strong>Washington Consensus (Williamson, 1989):</strong> Ten market-liberal reforms promoted by IMF, World Bank, and US Treasury: fiscal discipline, trade liberalisation, FDI liberalisation, privatisation, deregulation, secure property rights, tax reform (lower marginal rates, broader base), financial liberalisation, competitive exchange rates, and redirecting public spending towards health and education.</div>
+    <p>Underlying logic: markets efficiently allocate resources; comparative advantage dictates production; FDI brings capital and technology; the state's role is to provide a stable macroeconomic environment with secure property rights, not to direct the economy.</p>
+
+    <div class="pro-con">
+      <div class="pro">
+        <strong>✓ Case for market-led strategy</strong>
+        <ul>
+          <li>Comparative advantage: trade allows specialisation and efficiency gains</li>
+          <li>FDI: brings capital, technology, and management knowledge</li>
+          <li>Competition disciplines inefficiency and reduces rent-seeking</li>
+          <li>Avoids government failure — public sector capture, corruption, misallocation</li>
+          <li>Chile post-1973: structural reforms produced fastest Latin American growth in 1990s</li>
+        </ul>
+      </div>
+      <div class="con">
+        <strong>✗ Criticisms (post-Washington Consensus)</strong>
+        <ul>
+          <li>Structural adjustment: IMF conditions cut health/education spending, worsening poverty</li>
+          <li>Premature capital account liberalisation triggered Asia 1997 crisis (Stiglitz)</li>
+          <li>Privatisation without competition created private monopolies</li>
+          <li>Comparative advantage may lock countries into commodities (Prebisch-Singer)</li>
+          <li>"Lost decade" in Latin America after SAPs in 1980s — negative growth in many countries</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Interventionist (Developmental State) Strategy</h2>
+    <p>Governments in East Asia actively directed development: South Korea, Taiwan, and Japan used <strong>industrial policy</strong> — targeting credit to strategic sectors, infant industry protection, export promotion, and investment in education and infrastructure. Wade (1990): "governing the market" rather than freeing it produced superior development outcomes.</p>
+    <h3>Import Substitution Industrialisation (ISI)</h3>
+    <p>Protect domestic infant industries via tariffs, quotas, and subsidies. Allow industries to develop scale economies and learning-by-doing before exposing them to global competition. Problems: protected industries may never become competitive (rent-seeking); overvalued exchange rates needed to fund capital imports harm agricultural and export sectors; worked for some countries (Brazil's car industry) but failed in many others.</p>
+    <h3>Export-Led Growth (ELG)</h3>
+    <p>Competitive exchange rates, export processing zones, and WTO membership attract FDI and develop manufacturing export capacity. Forces firms to compete internationally, driving quality improvement. South Korea, Taiwan, China, Vietnam all used ELG successfully. Requires: absorptive human capital, domestic content in FDI, avoiding Dutch Disease.</p>
+
+    <div class="exam-tip">The false dichotomy: the most successful developers used <em>selective state intervention</em>, not pure ISI or pure Washington Consensus. South Korea used infant industry protection but with strict export performance requirements — protection was conditional and time-limited. Rodrik (2004): "industrial policy is not about picking winners — it is about finding and correcting market failures in the process of structural transformation." Use this to write sophisticated, nuanced conclusions.</div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 5 ═══ -->
+<div class="section-block" id="institutions">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.6e</span>
+    <span class="section-title">Institutions, Property Rights &amp; Governance</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>Why Institutions Are Foundational</h2>
+    <div class="def-box"><strong>Institutions (North, 1990):</strong> The "rules of the game" — formal rules (laws, property rights, constitutions) and informal norms (culture, trust, social capital) that shape incentives and economic behaviour. Good institutions lower transaction costs, secure returns to investment, and enable markets to function.</div>
+
+    <div class="def-box"><strong>Acemoglu, Johnson &amp; Robinson (2001):</strong> Used settler mortality as an instrument for institutional quality. Where European colonisers settled permanently (temperate climates — North America, Australia), they built <strong>inclusive institutions</strong>: broad property rights, rule of law, accountable government. Where mortality was high (tropical Africa, Latin America), they built <strong>extractive institutions</strong> — designed to transfer resources to Europe. These institutions persisted, explaining most present-day income variation across countries.</div>
+
+    <div class="def-box"><strong>Inclusive institutions:</strong> Broad property rights, rule of law, competitive markets, political pluralism → incentivise investment and innovation, enable creative destruction, sustain long-run growth.<br><br><strong>Extractive institutions:</strong> Concentrated power, insecure property rights, elite capture of resources → low investment incentives → poverty trap → further elite entrenchment (vicious circle).</div>
+
+    <h3>Property Rights and De Soto (2000)</h3>
+    <p>Hernando De Soto: the poor in developing countries often physically possess assets — land, homes — but without legal title. They cannot use these as collateral, sell them at market prices, or attract investment. Formalising property rights releases this "dead capital" — estimated at $9.3 trillion globally. Land titling programmes in Peru and Cambodia showed mixed results — increases in investment and credit access were smaller than De Soto predicted, suggesting property rights alone are insufficient without functioning credit markets and rule of law.</p>
+
+    <h3>Corruption</h3>
+    <p>Corruption increases transaction costs, distorts resource allocation (investment goes to well-connected rather than most productive firms), and deters FDI. Transparency International CPI: countries with high corruption (Afghanistan, South Sudan, Somalia) are consistently among the world's poorest. Causality is bidirectional: poverty generates corruption by lowering civil service wages and weakening accountability mechanisms — making it very difficult to escape without external intervention.</p>
+  </div>
+</div>
+
+<!-- ═══ SECTION 6 ═══ -->
+<div class="section-block" id="aid">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.6f</span>
+    <span class="section-title">Aid, IMF, World Bank, NGOs &amp; Debt Relief</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>Official Development Assistance (ODA)</h2>
+    <div class="def-box"><strong>ODA (Aid):</strong> Concessional financial flows (grants or low-interest loans) from developed country governments to developing countries — bilateral (government-to-government) or multilateral (via World Bank, UN agencies). UN target: 0.7% of GNI. Only Denmark, Sweden, Norway, and Luxembourg consistently meet this target. UK reached it in 2013 but subsequently cut to 0.5%.</div>
+
+    <div class="pro-con">
+      <div class="pro">
+        <strong>✓ Case for aid (Sachs 2005)</strong>
+        <ul>
+          <li>Fills Harrod-Domar financing gap — provides savings LDCs lack domestically</li>
+          <li>Direct health/education funding → immediate human capital gains</li>
+          <li>Can escape poverty traps by funding complementary investments simultaneously</li>
+          <li>Targeted interventions with strong RCT evidence: bed nets, ORS, vaccinations (Banerjee &amp; Duflo)</li>
+          <li>PEPFAR (HIV/AIDS): measurable lives saved, health outcomes improved</li>
+        </ul>
+      </div>
+      <div class="con">
+        <strong>✗ Case against aid (Easterly, Moyo)</strong>
+        <ul>
+          <li>Easterly (2006): despite $2.3 trillion in aid since 1960, many recipients remain poor</li>
+          <li>Moyo (2009): aid perpetuates bad governance — governments accountable to donors not citizens</li>
+          <li>Dependency: reduces incentive for domestic revenue mobilisation</li>
+          <li>Dutch Disease: large inflows appreciate exchange rate → hurts export competitiveness</li>
+          <li>Fungibility: aid frees government resources for military/elite consumption</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>IMF and World Bank</h2>
+    <div class="def-box"><strong>IMF:</strong> Provides short-term balance of payments support — typically conditional on fiscal austerity, monetary tightening, and structural adjustment. Criticism (Stiglitz 2002): imposed "market fundamentalism," premature financial liberalisation, and contractionary policies on vulnerable economies → deepened crises.</div>
+    <div class="def-box"><strong>World Bank:</strong> Long-term development finance — concessional IDA loans for poorest countries. Finances infrastructure, health, education, governance. Less condition-laden than IMF; more developmental focus. Increasingly uses results-based lending and randomised evaluations.</div>
+
+    <h2>NGOs</h2>
+    <p>Non-Governmental Organisations (Oxfam, MSF, BRAC, CARE) deliver development services where governments are absent or ineffective. Advantages: flexible, innovative, often more accountable to beneficiaries. Limitations: not democratically elected; may duplicate government services and undermine state capacity-building; operations fragmented and unable to achieve systemic change. BRAC (Bangladesh) is the world's largest NGO and shows NGOs can operate at scale — 100+ million beneficiaries across health, microfinance, education.</p>
+
+    <h2>Debt Relief</h2>
+    <p>High external debt forces governments to divert public spending to debt service, crowding out social investment. <strong>HIPC Initiative (1996):</strong> IMF/World Bank debt cancellation for qualifying heavily indebted poor countries that implement reform programmes. <strong>MDRI (2006):</strong> Full cancellation of debt to IMF, World Bank, and African Development Bank for HIPC countries. Impact: freed ~$100bn in debt service, enabling public spending shifts. Limitation: conditionality requirements delayed relief; many countries received relief only after prolonged periods of austerity.</p>
+
+    <div class="exam-tip">The key evaluative insight on aid: "The debate is not 'is aid good or bad' but 'what type of aid, under what conditions, works?' Banerjee and Duflo (2011, Poor Economics) find that targeted interventions with strong RCT evidence (oral rehydration therapy, bed net distribution, conditional cash transfers) have reliably improved outcomes. General budget support and large infrastructure programmes have much weaker evidence. Institutional context determines whether aid produces development or dependency." This framing impresses examiners far more than a simplistic for/against list.</div>
+  </div>
+</div>
+
+<!-- ═══ PAST PAPERS ═══ -->
+<div class="section-block" id="past-papers">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">Past Papers</span>
+    <span class="section-title">Past Paper Questions &amp; Model Answers</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+
+    <div class="question-card">
+      <div class="q-header" onclick="toggleQ(this)"><span class="q-marks">4 marks</span><span class="q-text">Explain why GDP per capita may be an imperfect measure of economic development.</span></div>
+      <div class="q-body"><div class="answer-section"><h4>Model Answer</h4>
+      <p>GDP per capita measures average income but fails to capture several key dimensions of development. First, it ignores the <strong>distribution of income</strong>: a high average masks extreme inequality where the poor see no gain despite rising national income. Second, it omits <strong>non-income dimensions</strong> of welfare — health outcomes, educational attainment, and political freedom — which Amartya Sen's capabilities approach identifies as central to human development.</p>
+      <p>Third, the <strong>informal economy</strong> is excluded, understating real living standards in many developing countries where subsistence agriculture and informal services are significant. Fourth, GDP can rise through <strong>environmental degradation</strong> — depletion of natural capital that reduces future productive potential. Finally, for countries with large foreign ownership of productive assets, GDP overstates residents' income — GNI per capita is more appropriate.</p>
+      <div class="mark-scheme"><strong>Mark scheme:</strong> 1 mark per well-developed point up to 4. Look for: distribution/inequality; non-income dimensions/Sen; informal economy; GNI vs GDP; environmental degradation.</div>
+      </div></div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header" onclick="toggleQ(this)"><span class="q-marks">8 marks</span><span class="q-text">Using the Harrod-Domar model, explain the role of savings and investment in economic development.</span></div>
+      <div class="q-body"><div class="answer-section"><h4>Model Answer</h4>
+      <p>The Harrod-Domar model (Roy Harrod 1939, Evsey Domar 1946) states that the growth rate of GDP equals the savings rate divided by the capital-output ratio: <strong>g = s/k</strong>. The capital-output ratio (k) measures the units of capital required to produce one unit of GDP — reflecting the economy's technology.</p>
+      <p>Savings are crucial because they finance investment: households and firms save a proportion of income (s), which is channelled through the financial system into capital investment. Investment adds to the capital stock, expanding productive capacity. With k fixed, more savings → more investment → more capital → more output → higher growth rate.</p>
+      <p>For developing countries, this identifies a "financing gap": domestic savings rates are too low to fund the investment needed for rapid development. If a country requires a 5% growth rate and k = 4, it needs s = 20%. If domestic savings only provide 10%, there is a 10% of GDP financing gap that must be filled by foreign aid, FDI, or external borrowing. This was the theoretical justification for large-scale development aid in the 1950s–70s.</p>
+      <p><strong>Evaluation (for Band 4):</strong> The model is limited by its assumption of a fixed capital-output ratio — it ignores total factor productivity and the role of technology. Solow (1956) showed that most long-run growth comes from TFP, not capital accumulation. Easterly (2001) found that aid-financed investment has not reliably translated into higher growth, suggesting that absorptive capacity, institutional quality, and human capital are equally important constraints.</p>
+      <div class="mark-scheme"><strong>Band 4:</strong> Accurate formula and explanation. Chain of causation from savings → investment → capital → growth. Application to developing country financing gap. Evaluation: limitations of fixed k; TFP; Easterly's empirical challenge.</div>
+      </div></div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-header" onclick="toggleQ(this)"><span class="q-marks">20 marks</span><span class="q-text">Evaluate the view that foreign aid is the most effective way to promote economic development in low-income countries.</span></div>
+      <div class="q-body"><div class="answer-section"><h4>Band 4 Model Plan</h4>
+      <p><strong>Define:</strong> ODA — concessional financial flows from developed to developing country governments. Development — broader than growth: HDI, poverty reduction, Sen's capabilities. Note: question asks about effectiveness <em>relative to alternatives</em>.</p>
+      <p><strong>For (Sachs):</strong> Harrod-Domar financing gap — LDCs lack domestic savings. Aid fills this gap, funding investment in health, education, infrastructure. Targeted interventions (PEPFAR, bed nets, ORS) have strong RCT evidence (Banerjee &amp; Duflo). HIPC debt relief freed public spending for social investment — measurable improvements in child mortality and school enrolment in recipient countries.</p>
+      <p><strong>Against (Easterly, Moyo):</strong> Despite $2.3 trillion in aid since 1960, many recipients remain poor. Moyo (2009): aid perpetuates bad governance by funding governments that are accountable to donors rather than citizens. Dependency: reduces domestic revenue mobilisation. Dutch Disease: large inflows appreciate exchange rate, undermining export competitiveness. Fungibility: aid frees resources for military spending or elite consumption.</p>
+      <p><strong>Alternative 1 — Trade:</strong> Trade access for LDC exports to OECD markets would deliver income gains potentially exceeding ODA. The EU's Everything But Arms (EBA) initiative provides duty-free access for least developed countries — sustainable income gain without dependency. But: structural constraints mean many LDCs lack capacity to exploit trade opportunities.</p>
+      <p><strong>Alternative 2 — Institutions:</strong> Acemoglu (2001): institutional quality is the foundational determinant of development. Aid without institutional reform may be wasted or captured by elites. South Korea and Botswana developed rapidly with relatively little aid — strong institutional foundations were more important than external finance.</p>
+      <p><strong>Alternative 3 — Domestic revenue mobilisation:</strong> IMF: LDC tax revenue as % of GDP averages ~15% vs 35–45% in OECD. Broadening the tax base (reducing informality, improving enforcement, combating BEPS) is more sustainable than aid and avoids dependency and governance distortions.</p>
+      <p><strong>Evaluation:</strong> The dichotomy is false — aid works under specific conditions. Banerjee and Duflo: targeted interventions with RCT evidence (health, primary education) reliably improve outcomes; general budget support has weak evidence. Institutional context determines whether aid produces development or dependency.</p>
+      <p><strong>Conclusion:</strong> Aid is not the most effective lever on its own. Trade access, institutional reform, and domestic revenue mobilisation are more fundamental for sustainable development. Aid is most valuable as a catalyst for high-social-return interventions that markets underprovide — conditional on reasonable institutional quality to ensure resources reach intended beneficiaries.</p>
+      <div class="mark-scheme"><strong>Band 4 criteria:</strong> Multiple named economists (Sachs, Easterly, Moyo, Banerjee &amp; Duflo, Acemoglu). Evidence-based evaluation weighing different types of aid. Genuine alternatives considered. Qualified conclusion specifying conditions under which aid is effective.</div>
+      </div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ ESSAY PLANS ═══ -->
+<div class="section-block" id="essay-plans">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">Essay Plans</span>
+    <span class="section-title">10 × 20-Mark Essay Plans</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 1 of 10</div>
+      <div class="ep-q">Evaluate the view that foreign aid is the most effective way to promote economic development in low-income countries.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">ODA; development (HDI + Sen capabilities); Harrod-Domar financing gap logic</div></div>
+      <div class="ep-row"><div class="ep-label">For</div><div class="ep-content">Sachs: fills financing gap; breaks poverty trap. Targeted interventions (bed nets, PEPFAR) have strong RCT evidence (Banerjee &amp; Duflo). HIPC debt relief freed social spending with measurable outcomes.</div></div>
+      <div class="ep-row"><div class="ep-label">Against</div><div class="ep-content">Easterly: $2.3tn, limited impact. Moyo: creates dependency, undermines accountability. Dutch Disease appreciates exchange rate. Fungibility diverts funds.</div></div>
+      <div class="ep-row"><div class="ep-label">Alternative 1</div><div class="ep-content">Trade access (EBA, WTO reform): sustainable income without dependency. Comparative advantage gains. But requires LDC capacity to compete.</div></div>
+      <div class="ep-row"><div class="ep-label">Alternative 2</div><div class="ep-content">Institutions (Acemoglu 2001): foundational — without property rights, aid is wasted. South Korea, Botswana: developed with little aid but strong institutions.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">Not the most effective lever alone. Aid most valuable for targeted high-social-return interventions. Trade + institutions more fundamental for sustainable development.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Sachs (2005)</span><span class="econ-badge">Easterly (2006)</span><span class="econ-badge">Moyo (2009)</span><span class="econ-badge">Banerjee &amp; Duflo</span><span class="econ-badge">Acemoglu</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 2 of 10</div>
+      <div class="ep-q">Evaluate the Harrod-Domar model as an explanation of economic growth in developing countries.</div>
+      <div class="ep-row"><div class="ep-label">Explain</div><div class="ep-content">g = s/k. Higher savings → investment → capital → output. Financing gap: low domestic s → need external finance. Simple, tractable, widely used by World Bank in 1950s–70s.</div></div>
+      <div class="ep-row"><div class="ep-label">Strength</div><div class="ep-content">Correctly identifies investment constraint. Provides clear savings targets. Justifies external finance (aid/FDI). Explains why very low-saving economies grow slowly.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 1</div><div class="ep-content">Fixed k ignores TFP. Solow (1956): most long-run growth is technology-driven, not capital accumulation. Diminishing returns to capital → growth rate falls as capital rises.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 2</div><div class="ep-content">Investment ≠ growth automatically — needs absorptive capacity, good institutions, human capital. Nigeria: vast oil investment, limited growth. Botswana: modest investment, rapid growth (institutions).</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 3</div><div class="ep-content">Easterly (2001): historical data shows investment rates poorly predict growth. Aid-financed investment hasn't consistently raised growth, suggesting other constraints binding.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">Useful starting framework — identifies savings/investment as necessary. Insufficient because it ignores TFP, institutions, and absorptive capacity which determine whether investment produces growth.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Harrod (1939), Domar (1946)</span><span class="econ-badge">Solow (1956)</span><span class="econ-badge">Easterly (2001)</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 3 of 10</div>
+      <div class="ep-q">Evaluate the view that institutional quality is the most important determinant of economic development.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">Institutions (North 1990): formal and informal rules of the game. Inclusive vs extractive (Acemoglu &amp; Robinson 2012). Development: HDI, poverty reduction, capabilities.</div></div>
+      <div class="ep-row"><div class="ep-label">For</div><div class="ep-content">AJR (2001): settler mortality → institutional quality → present income per capita. Explains ~50% of income variation across countries. Without secure property rights, no incentive to invest. North vs South Korea: same initial institutions split at 38th parallel → radical development divergence.</div></div>
+      <div class="ep-row"><div class="ep-label">Counter 1</div><div class="ep-content">Geography (Sachs): tropical disease and landlocked geography independently constrain growth. Malaria burden reduces productivity regardless of institutions. Evaluation: Botswana (landlocked, resource-rich) has strong institutions and high development — institutions can overcome geography.</div></div>
+      <div class="ep-row"><div class="ep-label">Counter 2</div><div class="ep-content">Human capital: low literacy and poor health constrain institutional effectiveness. But: human capital accumulation itself depends on secure institutions (schools need rule of law, property rights).</div></div>
+      <div class="ep-row"><div class="ep-label">Evaluate</div><div class="ep-content">Institutions may be foundational but are slow to change and resistant to external reform. "Second-generation reforms" (Rodrik 2007): incremental institutional improvements context-specific — no universal blueprint.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">Institutions are likely the most fundamental long-run determinant — they shape how all other resources are deployed. But short-run policy cannot dramatically alter institutions. Incremental improvements + human capital + infrastructure investment together form the most realistic development pathway.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Acemoglu et al. (2001)</span><span class="econ-badge">North (1990)</span><span class="econ-badge">Sachs (2001)</span><span class="econ-badge">Rodrik (2007)</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 4 of 10</div>
+      <div class="ep-q">Evaluate free trade as a development strategy for low-income countries.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">Free trade: specialisation based on comparative advantage, no trade barriers. Development strategy context: should LDCs liberalise or protect?</div></div>
+      <div class="ep-row"><div class="ep-label">For</div><div class="ep-content">Comparative advantage: specialise in labour-intensive manufactures → export-led growth → employment → rising wages. East Asian tigers: export-led growth consistently outperformed ISI. Economies of scale unavailable in small domestic markets.</div></div>
+      <div class="ep-row"><div class="ep-label">Against 1</div><div class="ep-content">Prebisch-Singer: if comparative advantage is in primary commodities, free trade locks countries into deteriorating ToT. Dynamic comparative advantage: infant industry protection needed to develop new capacities beyond commodities.</div></div>
+      <div class="ep-row"><div class="ep-label">Against 2</div><div class="ep-content">Historical hypocrisy (Chang 2002): UK, USA, Germany all industrialised behind tariff walls. IMF/World Bank "kicking away the ladder" by demanding LDC liberalisation while OECD agricultural subsidies (CAP, US farm bill) unfairly depress world prices.</div></div>
+      <div class="ep-row"><div class="ep-label">Against 3</div><div class="ep-content">Premature capital account liberalisation: Asia 1997 — capital flight triggered crisis in countries with sound fundamentals. Sequencing matters: liberalise goods trade before capital account.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">Free trade is powerful for countries that can compete but harmful for those facing stronger competitors with undeveloped industries. Selective, time-limited infant industry protection combined with export promotion as industries mature better explains successful developers than pure free trade or sustained protection.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Prebisch-Singer (1950)</span><span class="econ-badge">Chang (2002)</span><span class="econ-badge">East Asian tigers</span><span class="econ-badge">Stiglitz (2002)</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 5 of 10</div>
+      <div class="ep-q">Evaluate the Lewis dual-sector model as an explanation of structural change in developing economies.</div>
+      <div class="ep-row"><div class="ep-label">Explain</div><div class="ep-content">Surplus labour in agriculture (MLP ≈ 0) → industrial sector attracts workers at above-subsistence wage → profits reinvested → industrial expansion → structural transformation. Lewis turning point: surplus absorbed, wages rise.</div></div>
+      <div class="ep-row"><div class="ep-label">Strength 1</div><div class="ep-content">Describes East Asian experience well — Japan, South Korea, China all industrialised through labour absorption from agriculture. China's 300m rural-urban migrants 1980–2010 = textbook Lewis model in action.</div></div>
+      <div class="ep-row"><div class="ep-label">Strength 2</div><div class="ep-content">Identifies mechanism of structural change (sector reallocation) — more realistic than Harrod-Domar which is purely about capital accumulation. Connects migration, wages, profits, and reinvestment in one coherent model.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 1</div><div class="ep-content">Green Revolution raised agricultural productivity dramatically — surplus labour assumption is weaker than Lewis assumed. Agricultural growth itself can drive development independently of industrial sector.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 2</div><div class="ep-content">Harris-Todaro (1970): if industrial job creation is slower than rural-urban migration, urban unemployment grows. Expected urban wages must equal rural wages for equilibrium — but urban slums emerge en route. Migration is not costless.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 3</div><div class="ep-content">Profit repatriation: MNC-dominated industrial sector → profits leave the country → Lewis reinvestment mechanism breaks down without domestic linkages.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">Captures an important mechanism but is too simple. China and South Korea followed Lewis-type paths but with heavy state direction — not the passive private sector accumulation Lewis assumed. Most useful as an analytical lens, not a self-contained policy prescription.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Lewis (1954)</span><span class="econ-badge">Harris-Todaro (1970)</span><span class="econ-badge">China turning point</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 6 of 10</div>
+      <div class="ep-q">Evaluate the role of FDI in promoting economic development in low-income countries.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">FDI: investment creating lasting interest (&gt;10% equity) in a domestic enterprise by a foreign firm. Types: greenfield (new capacity) vs M&amp;A. Development: HDI, growth, human capital, technology.</div></div>
+      <div class="ep-row"><div class="ep-label">Benefits</div><div class="ep-content">Capital inflow fills Harrod-Domar financing gap. Technology and management transfer (spillovers to local suppliers). Employment and wage income. Integration into global value chains (GVCs). Tax revenue if properly enforced.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 1</div><div class="ep-content">Transfer pricing: TNCs shift profits abroad → limited tax revenue. OECD BEPS: $100–240bn annual loss, developing countries proportionally most affected (corporate tax is larger share of their revenue).</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 2</div><div class="ep-content">Enclave FDI: resource extraction with minimal local linkages (inputs imported, profits repatriated, skilled workers expatriated). Nigeria: vast oil FDI, limited development spillovers. Dutch Disease: resource FDI appreciates exchange rate, undermining manufacturing exports.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 3</div><div class="ep-content">Technology spillovers require absorptive capacity: if local firms lack human capital and institutional capacity, spillovers are minimal. FDI benefits conditional on host country's development level.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">FDI is not automatically developmental. Manufacturing and services FDI with domestic content requirements and technology transfer obligations promotes development. Resource extraction FDI without institutional capacity to capture rents may harm development through Dutch Disease and profit repatriation. Policy: attract quality FDI while retaining tax revenue and building local linkages.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">OECD BEPS</span><span class="econ-badge">Lewis reinvestment</span><span class="econ-badge">Dutch Disease</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 7 of 10</div>
+      <div class="ep-q">Evaluate the view that the HDI is a better measure of development than GDP per capita.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">HDI = ∛(Health × Education × Income); GDP per capita = national income ÷ population. Development: Sen's capabilities approach — expanding real freedoms, not just income.</div></div>
+      <div class="ep-row"><div class="ep-label">For HDI</div><div class="ep-content">Captures health (life expectancy) and education — directly relevant to Sen's capabilities. Reveals GDP–development divergence: Cuba ranks much higher on HDI than GDP rank (strong health/education). UAE: high GDP, lower HDI rank (restricted freedoms, migrant worker inequality).</div></div>
+      <div class="ep-row"><div class="ep-label">For HDI 2</div><div class="ep-content">Policy focus: HDI shifts attention from income growth to human development investment. Governments optimising for HDI invest in health and education rather than just GDP-maximising extraction.</div></div>
+      <div class="ep-row"><div class="ep-label">Limits of HDI</div><div class="ep-content">Ignores within-country inequality (IHDI corrects but data limited). Equal weighting arbitrary. Omits political freedom, gender equality, sustainability, happiness. Data quality variable in LDCs.</div></div>
+      <div class="ep-row"><div class="ep-label">Limits of comparison</div><div class="ep-content">Both measures have limits — neither captures all dimensions of development. Multidimensional measures (MPI, GII) address specific gaps. No single measure can capture the full complexity of human development.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">HDI is better than GDP per capita because it captures dimensions central to Sen's capabilities approach. But "better" does not mean "sufficient" — it should be used alongside inequality measures (Gini, IHDI), political freedom indices, and environmental sustainability metrics. Development measurement requires a dashboard, not a single indicator.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Sen (1999)</span><span class="econ-badge">Mahbub ul Haq (1990)</span><span class="econ-badge">IHDI</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 8 of 10</div>
+      <div class="ep-q">Evaluate the view that the Washington Consensus has failed as a development strategy.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">Washington Consensus (Williamson 1989): 10 market-liberal reforms — fiscal discipline, trade and FDI liberalisation, privatisation, deregulation, property rights. Promoted by IMF, World Bank, US Treasury for developing countries from 1980s.</div></div>
+      <div class="ep-row"><div class="ep-label">Evidence for failure</div><div class="ep-content">"Lost decade" in Latin America after 1980s structural adjustment — negative growth, rising poverty. Asia 1997 crisis: premature capital account liberalisation triggered crises in countries with sound fundamentals (Stiglitz). Privatisation without competition → private monopolies. Austerity cut health/education spending, worsening HDI in many recipient countries.</div></div>
+      <div class="ep-row"><div class="ep-label">Counterevidence</div><div class="ep-content">Chile: structural reforms produced Latin America's fastest growth in 1990s. Trade liberalisation: East Asian export-led growth used market access effectively. Fiscal discipline: hyperinflation in Brazil and Argentina ended after reform. Macroeconomic stability is necessary even if not sufficient.</div></div>
+      <div class="ep-row"><div class="ep-label">Why mixed results</div><div class="ep-content">Rodrik (2006): Washington Consensus reforms work in theory but fail in context-specific practice. "One size fits all" ignores institutional prerequisites — financial liberalisation needs strong banking regulation first. Sequencing matters more than any specific reform.</div></div>
+      <div class="ep-row"><div class="ep-label">Post-WC alternatives</div><div class="ep-content">"Second Washington Consensus" or "augmented WC": adds governance, institutional quality, social safety nets to original 10 reforms. Growth diagnostics (Hausmann, Rodrik, Velasco 2005): identify the most binding constraint in each country and address that specifically.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">Not entirely failed — macroeconomic stability and property rights are genuinely important. Failed by being too rigid, too fast, and ignoring institutional prerequisites. The lesson is not to abandon market principles but to apply them in a context-sensitive, properly sequenced way with adequate social protection.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Williamson (1989)</span><span class="econ-badge">Stiglitz (2002)</span><span class="econ-badge">Rodrik (2006)</span><span class="econ-badge">Chang (2002)</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 9 of 10</div>
+      <div class="ep-q">Evaluate the role of education in promoting economic development.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">Education as human capital investment (Mincer 1958, Becker). Development: HDI, poverty reduction, productivity growth. Both primary/secondary (access) and quality matter.</div></div>
+      <div class="ep-row"><div class="ep-label">Channel 1: Productivity</div><div class="ep-content">Education → ↑human capital → ↑productivity → ↑wages → ↑incomes → development. UNICEF: each additional year of schooling raises earnings 8–10% in developing economies. Aggregate: ↑labour quality → ↑TFP → ↑long-run growth.</div></div>
+      <div class="ep-row"><div class="ep-label">Channel 2: Externalities</div><div class="ep-content">Positive externalities: educated workers raise productivity of others (knowledge spillovers). Educated citizens demand better governance and accountability — improving institutional quality over time. Educated mothers: lower infant mortality, better child nutrition, smaller families → demographic dividend.</div></div>
+      <div class="ep-row"><div class="ep-label">Channel 3: Gender</div><div class="ep-content">World Bank: girls' education has highest social return — reduces fertility, improves child health, increases female labour force participation. Countries closing gender education gap (Bangladesh, Rwanda) show disproportionate development gains.</div></div>
+      <div class="ep-row"><div class="ep-label">Limits</div><div class="ep-content">Quality vs quantity: expanding school enrolment without improving learning quality has limited impact. PISA-type assessments show weak learning outcomes even with high enrolment in some LDCs. Education without complementary job creation → educated unemployment (graduate unemployment problem in South Asia).</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">Education is one of the highest social-return development investments — especially primary education and girls' education. But effectiveness depends on quality (not just enrolment), complementary labour market development, and institutional capacity to deploy educated workers productively. Education is necessary but not sufficient for development.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Mincer (1958)</span><span class="econ-badge">World Bank</span><span class="econ-badge">UNICEF</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 10 of 10</div>
+      <div class="ep-q">Evaluate the Prebisch-Singer hypothesis and its implications for development strategy.</div>
+      <div class="ep-row"><div class="ep-label">Explain</div><div class="ep-content">Primary commodity prices decline relative to manufactured goods over the long run. Three mechanisms: (1) low income elasticity (Engels' Law) — demand for commodities grows slowly; (2) technological progress in primary sectors reduces prices not wages; (3) union bargaining captures productivity gains in manufacturing but not agriculture.</div></div>
+      <div class="ep-row"><div class="ep-label">Policy implication</div><div class="ep-content">ISI: protect infant industries from global competition via tariffs and subsidies. Diversify into manufacturing to escape commodity dependence. Implemented in Latin America 1950s–70s.</div></div>
+      <div class="ep-row"><div class="ep-label">Empirical support</div><div class="ep-content">Long-run commodity price data broadly consistent with the hypothesis. World Bank: commodity exporters grew slower on average than manufacturing exporters in 20th century. Sub-Saharan Africa's commodity dependence → relative stagnation while East Asia's manufacturing focus → rapid development.</div></div>
+      <div class="ep-row"><div class="ep-label">Empirical challenge</div><div class="ep-content">2000s "commodity super-cycle": rapidly rising commodity prices driven by Chinese demand temporarily contradicted the hypothesis. Some commodity exporters (Botswana — diamonds, Chile — copper) developed successfully via strong institutions capturing resource rents.</div></div>
+      <div class="ep-row"><div class="ep-label">ISI critique</div><div class="ep-content">Latin American ISI: created inefficient industries permanently dependent on protection. Contributed to 1980s debt crises. Infant industries rarely became internationally competitive. Overvalued exchange rates needed to fund capital imports taxed agricultural sector.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">Prebisch-Singer identifies a genuine structural tendency; the policy implication (diversification away from commodity dependence) is broadly correct. But ISI was a poor implementation: protection should be conditional and time-limited, with export performance requirements — as East Asia demonstrated. The goal is dynamic comparative advantage, not permanent protection.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Prebisch (1950)</span><span class="econ-badge">Singer (1950)</span><span class="econ-badge">Chang (2002)</span><span class="econ-badge">Botswana case</span></div>
+    </div>
+
+  </div>
+</div>
+
+</main>
+</div><!-- /content -->
+
+<script>
+const PW = 'cloud';
+document.getElementById('pwInput').addEventListener('keydown', e => { if(e.key==='Enter') checkPw(); });
+function checkPw(){
+  if(document.getElementById('pwInput').value === PW){
+    document.getElementById('gate').style.display='none';
+    document.getElementById('content').style.display='block';
+  } else {
+    document.getElementById('pwError').style.display='block';
+    document.getElementById('pwInput').value='';
+    setTimeout(()=>document.getElementById('pwError').style.display='none', 2500);
+  }
+}
+function toggleSection(header){
+  const body=header.nextElementSibling, icon=header.querySelector('.toggle-icon');
+  const isOpen = body.style.display !== 'none';
+  body.style.display = isOpen ? 'none' : 'block';
+  icon.style.transform = isOpen ? '' : 'rotate(180deg)';
+}
+function toggleQ(header){ header.nextElementSibling.classList.toggle('open'); }
+document.querySelectorAll('.section-body').forEach(b => b.style.display='block');
+document.querySelectorAll('.toggle-icon').forEach(i => i.style.transform='rotate(180deg)');
+</script>
+</body>
+</html>
