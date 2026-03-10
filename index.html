@@ -56,13 +56,14 @@
 
 <div id="content">
 <nav>
-  <span class="logo">EcoNotes</span><span class="unit-tag">Unit 4 · Ch.6</span>
-  <a href="#growth-dev">Growth vs Development</a>
-  <a href="#hdi">HDI &amp; Measures</a>
-  <a href="#models">Development Models</a>
-  <a href="#strategies">Strategies</a>
+  <span class="logo">EcoNotes</span><span class="unit-tag">Unit 4 &middot; Ch.6</span>
+  <a href="#measures">Measures</a>
+  <a href="#econ-constraints">Economic Constraints</a>
+  <a href="#nonecon-constraints">Non-Economic</a>
+  <a href="#market-strategies">Market Strategies</a>
+  <a href="#interventionist">Interventionist</a>
+  <a href="#other-strategies">Other Strategies</a>
   <a href="#institutions">Institutions</a>
-  <a href="#aid">Aid &amp; Debt</a>
   <a href="#past-papers">Past Papers</a>
   <a href="#essay-plans">Essay Plans</a>
 </nav>
@@ -80,253 +81,615 @@
 </div>
 
 <main>
-
-<!-- ═══ SECTION 1 ═══ -->
-<div class="section-block" id="growth-dev">
+<!-- SECTION 1: MEASURES -->
+<div class="section-block" id="measures">
   <div class="section-header" onclick="toggleSection(this)">
-    <span class="section-num">4.3.6a</span>
-    <span class="section-title">Economic Growth vs Economic Development</span>
-    <span class="toggle-icon">▼</span>
+    <span class="section-num">4.3.6 — 1</span>
+    <span class="section-title">Measures of Economic Development</span>
+    <span class="toggle-icon">&#9660;</span>
   </div>
   <div class="section-body">
-    <h2>The Core Distinction</h2>
-    <div class="def-box"><strong>Economic growth:</strong> An increase in a country's real GDP (or real GDP per capita) over time — the expansion of output. A narrow, quantitative measure.</div>
-    <div class="def-box"><strong>Economic development:</strong> A broader improvement in human welfare: rising living standards, reduced poverty, improved health, better education, greater freedom and security, reduced inequality. Requires growth but growth alone does not guarantee it.</div>
-    <p>Growth is <em>necessary but insufficient</em> for development. High GDP per capita can co-exist with extreme poverty, low life expectancy, and constrained freedoms — the "growth without development" problem. Key example: Gulf oil states had rapidly rising GDP per capita but excluded migrant workers from most development gains, and political freedoms remained severely restricted.</p>
-    <p>Amartya Sen (<em>Development as Freedom</em>, 1999): development is the expansion of real freedoms — political freedoms, economic facilities, social opportunities, transparency guarantees, and protective security. Income is an instrument, not the end goal.</p>
+    <p style="font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent);background:rgba(27,92,181,.08);border:1px solid rgba(27,92,181,.2);padding:.12rem .45rem;border-radius:3px;display:inline-block;margin-bottom:.75rem;">SPEC: 4.3.6 &#8212; 1a, 1b, 1c</p>
 
-    <h2>Why GDP Per Capita Understates or Misrepresents Development</h2>
+    <h2>The Human Development Index (HDI)</h2>
+    <p>Created by Mahbub ul Haq and Amartya Sen for the UNDP (1990). Combines three dimensions into a composite 0&#8211;1 score. Reflects Sen&#8217;s capabilities approach: development = expanding real freedoms, not just income.</p>
+
+    <h3>The Three Components &#8212; Exactly How Each Is Measured</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Dimension</th><th>Indicator</th><th>Min</th><th>Max</th></tr></thead>
+      <tbody>
+        <tr><td>Health</td><td>Life expectancy at birth (years)</td><td>20 yrs</td><td>85 yrs</td></tr>
+        <tr><td>Education</td><td>Mean years of schooling (adults 25+) AND expected years of schooling (children)</td><td>0 yrs</td><td>15/18 yrs</td></tr>
+        <tr><td>Standard of Living</td><td>GNI per capita at PPP (2017 US$)</td><td>$100</td><td>$75,000</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="formula">HDI = &#8731;(Health Index &#215; Education Index &#215; Income Index) <span>&#8212; geometric mean of normalised scores; ranges 0 to 1</span></div>
+
+    <p><strong>Classifications:</strong> Very High &gt;0.800 (Norway ~0.966) &#8226; High 0.700&#8211;0.799 (China, Brazil) &#8226; Medium 0.550&#8211;0.699 (India, Ghana) &#8226; Low &lt;0.550 (Niger ~0.394, South Sudan)</p>
+
+    <p><strong>Why the geometric mean matters:</strong> Unlike a simple average, the geometric mean penalises unbalanced development. A very low health score cannot be compensated by a very high income score. This incentivises governments to invest across all three dimensions rather than optimising for one.</p>
+
+    <h2>Advantages of HDI</h2>
     <ul>
-      <li><strong>Ignores distribution:</strong> A Gini of 0.6 means the average may be high while the poor see no gain. Real median income matters more than mean.</li>
-      <li><strong>Ignores non-income welfare:</strong> Health outcomes, years of schooling, political freedom, and environmental quality are not captured in GDP.</li>
-      <li><strong>Informal economy:</strong> Subsistence agriculture and informal sector output are excluded — understates real living standards in many LDCs.</li>
-      <li><strong>Environmental degradation:</strong> Extracting natural resources raises GDP while depleting natural capital — future productive capacity falls even as current GDP rises.</li>
-      <li><strong>GNI vs GDP:</strong> For countries with large foreign ownership of productive assets, GDP overstates residents' income. Ireland's GDP exceeds GNI by ~20% because multinational profits are repatriated — GDP overstates Irish living standards.</li>
+      <li><strong>Multidimensional:</strong> Captures health and education alongside income &#8212; aligns with Sen&#8217;s capabilities. A person needs health and education to participate fully in economic and social life, not just income.</li>
+      <li><strong>Reveals GDP&#8211;development divergence:</strong> Cuba and Sri Lanka rank far higher on HDI than their income rank suggests &#8212; strong social policy delivers development with modest income. Conversely, Equatorial Guinea has high GDP/capita but low HDI &#8212; oil revenues not translated into broad human development.</li>
+      <li><strong>Policy signalling:</strong> Decomposing HDI into its three components tells policymakers exactly where development is lagging &#8212; health? education? income? &#8212; more actionable than a single GDP figure.</li>
+      <li><strong>Consistent and comparable:</strong> UNDP calculates HDI annually for 193 countries using standardised methodology &#8212; robust cross-country and time-series comparison is possible.</li>
+      <li><strong>Geometric mean avoids substitutability:</strong> Countries cannot compensate for very poor health by being very rich &#8212; more realistic than arithmetic averaging.</li>
     </ul>
-    <div class="exam-tip">The growth vs development distinction is one of the most frequently examined Unit 4 concepts. Always lead with Amartya Sen's capabilities approach for the "development" definition — it signals to the examiner that you understand the distinction at a conceptual level. Then give a concrete example: "Saudi Arabia has high GDP per capita but ranks significantly lower on HDI due to restrictions on political freedom and high inequality."</div>
+
+    <h2>Limitations of HDI</h2>
+    <ul>
+      <li><strong>Ignores within-country inequality:</strong> A high national average HDI can mask extreme poverty among subgroups. The IHDI (Inequality-adjusted HDI) corrects for this but is less widely reported due to data gaps.</li>
+      <li><strong>Ignores political freedom and human rights:</strong> Saudi Arabia and UAE score high on HDI but severely restrict political participation and gender equality &#8212; dimensions central to Sen&#8217;s capabilities approach but absent from HDI.</li>
+      <li><strong>Ignores environmental sustainability:</strong> GNI and life expectancy can rise through resource depletion &#8212; HDI reflects current welfare not whether it is environmentally sustainable.</li>
+      <li><strong>Arbitrary equal weighting:</strong> Why should health, education, and income contribute equally? Prioritisations differ by country and individual circumstance.</li>
+      <li><strong>Data quality:</strong> Life expectancy and schooling statistics are unreliable in countries with weak statistical capacity &#8212; particularly Sub-Saharan Africa. Published HDI figures may overstate achievement.</li>
+      <li><strong>PPP conversions are imperfect:</strong> GNI at PPP is sensitive to the basket of goods chosen and is revised periodically &#8212; creates inconsistencies in time-series comparisons.</li>
+    </ul>
+
+    <div class="exam-tip">Best evaluative conclusion: &#8220;HDI improves on GDP per capita by incorporating health and education capability, but it still ignores inequality, political freedom, gender equality, and environmental sustainability. A comprehensive picture of development requires a dashboard: HDI + Gini coefficient + Gender Inequality Index + environmental metrics. No single composite can fully capture the multidimensional nature of development.&#8221;</div>
+
+    <h2>Other Measures of Development</h2>
+    <p style="font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent);background:rgba(27,92,181,.08);border:1px solid rgba(27,92,181,.2);padding:.12rem .45rem;border-radius:3px;display:inline-block;margin-bottom:.75rem;">SPEC: 4.3.6 &#8212; 1c &#8212; ALL SIX MUST BE KNOWN</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Measure</th><th>What it captures</th><th>Why it matters for development</th><th>Limitation</th></tr></thead>
+      <tbody>
+        <tr><td>% adult male labour in agriculture</td><td>Degree of structural transformation &#8212; how much of the workforce is still in low-productivity traditional sector</td><td>High % = pre-industrial economy. Lewis model: development = labour moves from agriculture to higher-productivity industry and services. UK &lt;2%; Ethiopia ~70%.</td><td>Doesn&#8217;t capture agricultural productivity &#8212; high % may reflect efficient commercial farming, not underdevelopment</td></tr>
+        <tr><td>Access to clean water (% population)</td><td>Whether the population can access safely managed drinking water &#8212; the most basic human survival need</td><td>Contaminated water causes cholera, typhoid, diarrhoea &#8212; major causes of child mortality in LDCs. UN SDG 6: clean water for all by 2030. ~2 billion people lack safely managed water.</td><td>Doesn&#8217;t measure water quality or reliability &#8212; &#8220;access&#8221; may mask intermittent supply</td></tr>
+        <tr><td>Energy consumption per capita (kWh/person/year)</td><td>Level of industrialisation and modern living standards &#8212; correlates with mechanisation, manufacturing, and economic activity</td><td>Very low = reliance on subsistence agriculture with no modern infrastructure. Rising energy use signals industrial take-off.</td><td>High consumption may reflect energy inefficiency rather than high living standards; also implies environmental costs</td></tr>
+        <tr><td>Internet access per 1,000 population</td><td>Digital connectivity &#8212; ability to participate in the modern information economy</td><td>Internet enables e-commerce, access to education and healthcare, financial inclusion, and information. Digital divide deepens inequality between developed and developing nations.</td><td>Access &#8800; usage &#8212; infrastructure present but unaffordable or unusable for many. Mobile internet has partly closed the gap.</td></tr>
+        <tr><td>Mobile phones per 1,000 population</td><td>Economic participation and financial inclusion via mobile technology</td><td>Mobile penetration has leapfrogged fixed-line infrastructure in Sub-Saharan Africa. Enables mobile banking (M-Pesa, Kenya), agricultural price information, health services.</td><td>Ownership doesn&#8217;t guarantee productive use &#8212; a phone is a communication device, not automatically a development tool</td></tr>
+        <tr><td>Doctors per 1,000 population</td><td>Healthcare system capacity to deliver medical services</td><td>WHO minimum: 1 doctor per 1,000. Many Sub-Saharan African countries have &lt;0.1. Low ratio &#8594; high preventable mortality. Brain drain (doctors emigrate to OECD) depletes capacity even as GDP rises.</td><td>Quantity &#8800; quality; distribution matters &#8212; doctors concentrated in cities while rural populations go unserved</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="exam-tip">Exam technique for &#8220;evaluate a development measure&#8221; questions: (1) state what it specifically measures and why that dimension matters for development, (2) give a real-world country example where it reveals something GDP misses, (3) give one specific limitation. All six measures are named on the spec &#8212; know them all and have a one-sentence definition ready for each.</div>
   </div>
 </div>
 
-<!-- ═══ SECTION 2 ═══ -->
-<div class="section-block" id="hdi">
+<!-- SECTION 2: ECONOMIC CONSTRAINTS -->
+<div class="section-block" id="econ-constraints">
   <div class="section-header" onclick="toggleSection(this)">
-    <span class="section-num">4.3.6b</span>
-    <span class="section-title">Measures of Development — HDI &amp; Beyond</span>
-    <span class="toggle-icon">▼</span>
+    <span class="section-num">4.3.6 &#8212; 2a</span>
+    <span class="section-title">Economic Constraints on Growth and Development</span>
+    <span class="toggle-icon">&#9660;</span>
   </div>
   <div class="section-body">
-    <h2>Human Development Index (HDI)</h2>
-    <div class="def-box"><strong>HDI:</strong> Composite index created by Mahbub ul Haq and Amartya Sen for the UNDP (1990). Three dimensions: (1) <strong>Health</strong> — life expectancy at birth; (2) <strong>Education</strong> — mean years of schooling + expected years of schooling; (3) <strong>Standard of living</strong> — GNI per capita at PPP. Each dimension is normalised 0–1.</div>
-    <div class="formula">HDI = ∛(Health Index × Education Index × Income Index) <span>— geometric mean; ranges 0 (lowest) to 1 (highest)</span></div>
-    <p>Classification: Very High (&gt;0.800), High (0.700–0.799), Medium (0.550–0.699), Low (&lt;0.550). Norway leads (~0.966); Niger is near the bottom (~0.394).</p>
+    <p style="font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent);background:rgba(27,92,181,.08);border:1px solid rgba(27,92,181,.2);padding:.12rem .45rem;border-radius:3px;display:inline-block;margin-bottom:.75rem;">SPEC: 4.3.6 &#8212; 2a &#8212; all 10 bullet points</p>
 
-    <h3>Key Advantage: It Reveals Divergence from GDP Rankings</h3>
+    <h2>1. Volatility of Commodity Prices</h2>
+    <p>Many developing countries depend heavily on primary commodity exports (oil, copper, cocoa, coffee, cotton). Commodity prices are highly volatile &#8212; driven by weather, global demand cycles, speculation, and supply shocks.</p>
     <ul>
-      <li><strong>Outperformers on HDI vs GDP:</strong> Cuba, Sri Lanka, and Vietnam rank higher on HDI than their income rank suggests — they invested heavily in health and education despite modest incomes.</li>
-      <li><strong>Underperformers on HDI vs GDP:</strong> Some oil-rich states (Equatorial Guinea, Angola) have higher GDP per capita than their HDI suggests — resource revenues are not translated into broad human development.</li>
+      <li><strong>Revenue instability:</strong> When prices fall, export earnings collapse &#8594; government tax revenue falls &#8594; cuts to health, education, and infrastructure spending</li>
+      <li><strong>Investment uncertainty:</strong> Firms and governments cannot plan long-run investment when revenues are unpredictable &#8594; Harrod-Domar: volatile savings rate means volatile growth rate</li>
+      <li><strong>Dutch Disease:</strong> High commodity prices &#8594; large foreign exchange inflows &#8594; exchange rate appreciates &#8594; manufacturing exports become uncompetitive &#8594; deindustrialisation. Then when commodity prices fall, no manufacturing base remains.</li>
+    </ul>
+    <p><strong>Example:</strong> Nigeria &#8212; oil is ~90% of export earnings. The 2014&#8211;16 oil price crash halved GDP growth and caused a deep recession. Government was forced to cut social spending just when citizens needed it most.</p>
+
+    <h2>2. Primary Product Dependency &#8212; Prebisch-Singer Hypothesis</h2>
+    <div class="def-box"><strong>Prebisch-Singer Hypothesis (Ra&#250;l Prebisch and Hans Singer, 1950):</strong> The terms of trade (ToT) of primary commodity exporters deteriorate over time relative to manufactured goods prices. Three mechanisms: (1) income elasticity of demand for commodities is low (Engels&#8217; Law) &#8212; as incomes rise globally, demand for manufactures grows faster than for commodities; (2) technological progress in primary sectors reduces commodity prices rather than raising wages; (3) manufacturing workers capture productivity gains through union bargaining; agricultural workers cannot. Long-run result: commodity exporters&#8217; import purchasing power falls.</div>
+    <div class="formula">Terms of Trade = (Export Price Index / Import Price Index) &#215; 100 <span>&#8212; a fall means each unit of exports buys fewer imports over time</span></div>
+    <p><strong>Policy implication &#8212; Import Substitution Industrialisation (ISI):</strong> Protect infant industries via tariffs/subsidies to diversify out of commodity dependence into manufacturing. Implemented in Latin America 1950s&#8211;70s &#8212; mixed results.</p>
+    <p><strong>Evaluation:</strong> The 2000s commodity super-cycle (Chinese demand) temporarily reversed the trend &#8212; commodity prices rose sharply. But post-2011 prices fell again. The long-run trend broadly holds, but timing and magnitude vary significantly across different commodities.</p>
+
+    <h2>3. Savings Gap &#8212; The Harrod-Domar Model</h2>
+    <div class="def-box"><strong>Harrod-Domar (Roy Harrod 1939, Evsey Domar 1946):</strong> Growth rate = savings rate (s) &#247; capital-output ratio (k). Domestic savings fund investment; investment adds capital; capital raises output. If domestic savings are too low to fund required investment, a <strong>savings gap</strong> (financing gap) exists that must be filled by external sources.</div>
+    <div class="formula">g = s / k <span>&#8212; e.g. to achieve 6% growth with k=4, need s=24%. If domestic s=10%, savings gap = 14% of GDP &#8212; must be filled by aid, FDI, or borrowing</span></div>
+    <p>Why LDCs have low domestic savings: (1) incomes too low to save beyond subsistence; (2) underdeveloped financial systems &#8212; banks don&#8217;t reach rural populations; (3) high dependency ratios &#8212; many dependants per worker reduces household savings capacity.</p>
+    <p><strong>Policy implication:</strong> Foreign aid, FDI, or external borrowing can fill the savings gap &#8212; this was the theoretical foundation for large-scale development aid programmes 1950s&#8211;70s (Sachs 2005 revived this argument).</p>
+    <p><strong>Limitation:</strong> Assumes fixed capital-output ratio &#8212; ignores TFP. Solow (1956): most long-run growth is technology-driven. Easterly (2001): aid-financed investment has not reliably produced growth &#8212; absorptive capacity and institutions matter equally.</p>
+
+    <h2>4. Foreign Currency Gap</h2>
+    <div class="def-box"><strong>Two-gap model (Chenery &amp; Strout, 1966):</strong> Even after closing the domestic savings gap via external finance, a country may still lack the <strong>foreign currency (hard currency)</strong> needed to import capital goods, technology, and intermediate inputs essential for investment. This is a separate binding constraint. The binding constraint switches between the savings gap and the foreign exchange gap depending on the country&#8217;s stage of development and export structure.</div>
+    <ul>
+      <li><strong>Savings gap:</strong> Total investment needed exceeds total domestic savings &#8594; filled by ODA, FDI</li>
+      <li><strong>Foreign exchange gap:</strong> Import requirements for development exceed export earnings &#8594; insufficient hard currency to buy capital goods from abroad</li>
+    </ul>
+    <p>A country can have adequate local-currency savings (e.g. oil revenues) but still lack the diverse export base to earn the specific foreign exchange needed to import technology and machinery. Solutions: export diversification; FDI (brings hard currency directly); foreign borrowing (creates debt risk).</p>
+
+    <h2>5. Capital Flight</h2>
+    <div class="def-box"><strong>Capital flight:</strong> Movement of financial assets out of a country, typically due to political instability, fear of expropriation, high taxes, currency risk, or weak property rights. Reduces domestic savings available for investment, reduces tax revenue, and worsens the foreign exchange gap.</div>
+    <ul>
+      <li><strong>Illegal capital flight:</strong> False trade invoicing, corruption proceeds, tax evasion through offshore accounts (Switzerland, Cayman Islands, British Virgin Islands)</li>
+      <li><strong>Legal capital flight:</strong> Wealthy individuals and firms legally moving assets to countries with stronger property rights, lower taxes, or better returns</li>
+    </ul>
+    <p>Global Financial Integrity: illicit capital flows out of developing countries estimated at $1&#8211;1.8 trillion annually &#8212; far exceeding total ODA (~$200bn). Sub-Saharan Africa has lost more capital through flight than it has received in aid over 50 years. Creates a vicious circle: weak institutions &#8594; capital flight &#8594; less tax revenue &#8594; weaker public services &#8594; weaker institutions.</p>
+
+    <h2>6. Demographic Factors</h2>
+    <h3>Population Size</h3>
+    <p>Large populations can provide scale for domestic markets and a large labour force. But if population grows faster than GDP, GDP per capita falls. Sub-Saharan Africa: population growth ~2.7%/year vs GDP growth ~3&#8211;4% &#8594; minimal improvement in living standards per head.</p>
+    <h3>Age Distribution and Dependency Ratio</h3>
+    <div class="def-box"><strong>Dependency ratio:</strong> Economically dependent (children + elderly) as a proportion of working-age (15&#8211;64) population. A high dependency ratio reduces savings rates, increases per-worker costs of education and healthcare, and constrains growth potential.</div>
+    <p><strong>Demographic dividend:</strong> When fertility rates fall, the working-age share temporarily rises &#8212; a one-time window for rapid growth. South Korea, Taiwan, Thailand exploited this dividend (1960s&#8211;90s) by investing heavily in education for the large working-age cohort and creating manufacturing employment. Sub-Saharan Africa will enter this window as fertility falls &#8212; whether it captures the dividend depends on job creation and education investment.</p>
+    <h3>Migration</h3>
+    <ul>
+      <li><strong>Brain drain (negative):</strong> Skilled workers emigrate &#8212; doctors, engineers, teachers leave for higher OECD wages, depleting human capital most needed for development. ~65,000 African-trained doctors work in OECD countries.</li>
+      <li><strong>Remittances (positive):</strong> Migrants send money home &#8212; exceeds FDI and ODA combined in many LDCs. India: $89bn in 2022; Philippines: $36bn. Directly raises household incomes and funds education, health, and housing.</li>
+      <li><strong>Return migration (positive):</strong> Migrants return with skills, savings, networks, and entrepreneurial capacity.</li>
     </ul>
 
-    <h3>Limitations of HDI</h3>
-    <ul>
-      <li><strong>Ignores within-country inequality:</strong> The IHDI (Inequality-adjusted HDI) corrects for this — HDI falls when inequality is high, but data is less available.</li>
-      <li><strong>Equal weighting is arbitrary:</strong> Why weight health, education, and income equally? A dying patient with a PhD values health more than income.</li>
-      <li><strong>Omits political freedom, gender equality, environmental sustainability</strong> — all important dimensions of development.</li>
-      <li><strong>Data reliability:</strong> Reported life expectancy and schooling figures may be inaccurate in countries with weak statistical capacity.</li>
-    </ul>
+    <h2>7. Debt &#8212; Household and Overseas</h2>
+    <h3>Overseas (External) Debt</h3>
+    <p>Borrowing from foreign creditors in foreign currency forces governments to divert public spending to debt service. The <strong>debt trap</strong>: if growth is insufficient to service debt, new borrowing is needed, causing debt to compound. Latin America in the 1980s: IMF structural adjustment programmes required fiscal austerity &#8212; cuts to social spending caused the &#8220;lost decade.&#8221;</p>
+    <p><strong>Debt overhang:</strong> Excessive debt deters private investment &#8212; investors expect future tax rises to service debt, reducing expected returns on investment. Even solvent governments suffer lower investment due to overhang.</p>
+    <h3>Household Debt</h3>
+    <p>High-interest informal debt (50&#8211;200% per year from informal moneylenders in many developing countries) traps households &#8212; unable to accumulate savings or invest in human capital. Reduces consumption and enterprise investment capacity.</p>
 
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Measure</th><th>What it captures</th><th>Key limitation</th></tr></thead>
-        <tbody>
-          <tr><td>GDP per capita (PPP)</td><td>Average income and purchasing power</td><td>Ignores distribution, non-income welfare</td></tr>
-          <tr><td>HDI</td><td>Income + health + education</td><td>Ignores inequality, freedom, environment</td></tr>
-          <tr><td>IHDI</td><td>HDI discounted by inequality in each dimension</td><td>Data limited in many LDCs</td></tr>
-          <tr><td>MPI (Multidimensional Poverty)</td><td>Multiple simultaneous deprivations</td><td>Threshold choices are arbitrary</td></tr>
-          <tr><td>Gini coefficient</td><td>Income inequality within a country</td><td>Doesn't capture absolute living standards</td></tr>
-          <tr><td>Gender Inequality Index</td><td>Reproductive health, empowerment, labour market gaps by gender</td><td>Does not capture violence or unpaid care work</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="exam-tip">For 8-mark "explain" questions on development measures: (1) define the measure precisely with formula/components, (2) give a real-world example of a country that ranks differently on it vs GDP per capita, (3) identify one specific limitation and explain why it matters. This structure reliably earns 6–8 marks.</div>
+    <h2>8. Access to Credit and Banking</h2>
+    <p>Without formal banking and credit access, individuals and small firms cannot invest beyond current income, smooth consumption across shocks, or accumulate business capital. The <strong>unbanked</strong> (estimated 1.4 billion globally, World Bank Findex) rely on informal lenders or forgo investment entirely.</p>
+    <p>Financial exclusion compounds poverty: the poor pay higher rates for informal credit; cannot save securely; cannot access insurance against health or weather shocks. Mobile banking has dramatically expanded access in East Africa (M-Pesa: 50 million users in Kenya, Tanzania, and beyond) &#8212; leapfrogging traditional bank branch infrastructure. Microfinance (see strategies section) is the main institutional response to financial exclusion.</p>
+
+    <h2>9. Infrastructure</h2>
+    <p>Inadequate physical infrastructure &#8212; roads, ports, electricity, water, telecoms &#8212; raises transaction costs, reduces market integration, and constrains all other investment. Infrastructure is a complementary input: other investments (factories, farms, schools) are less productive without it.</p>
+    <ul>
+      <li><strong>Transport:</strong> Poor roads prevent rural farmers from reaching markets &#8212; forced to sell to local intermediaries at low prices. World Bank: improving rural road connectivity can raise agricultural incomes 30&#8211;50%.</li>
+      <li><strong>Power:</strong> Unreliable electricity forces firms to invest in private generators &#8212; raises costs, reduces competitiveness. Sub-Saharan Africa: power outages reduce GDP growth by ~1&#8211;2% per year.</li>
+      <li><strong>Ports/logistics:</strong> Inefficient ports and customs raise import/export costs &#8212; equivalent to additional tariffs. Landlocked countries face especially high logistics costs.</li>
+    </ul>
+    <p>World Bank: 1% increase in infrastructure investment raises long-run GDP by approximately 1.5% in developing countries. Infrastructure is a classic market failure (public good / natural monopoly) requiring government provision or strong regulation of private providers.</p>
+
+    <h2>10. Education and Skills</h2>
+    <p>Low levels of education and vocational skills reduce labour productivity, constrain technology adoption, and limit the industries that can develop. Education creates a poverty trap: poor families cannot afford quality education &#8594; low human capital &#8594; low wages &#8594; cannot fund children&#8217;s education.</p>
+    <p><strong>Quality vs quantity:</strong> Many LDCs have expanded enrolment without improving learning outcomes &#8212; the binding constraint is often learning quality, not access. PISA-equivalent assessments show very low foundational literacy and numeracy even in countries with near-universal primary enrolment (e.g. India, Pakistan). Girls&#8217; education has the highest social return &#8212; reduces fertility, improves child health, and increases female labour force participation.</p>
   </div>
 </div>
 
-<!-- ═══ SECTION 3 ═══ -->
-<div class="section-block" id="models">
+<!-- SECTION 3: NON-ECONOMIC CONSTRAINTS -->
+<div class="section-block" id="nonecon-constraints">
   <div class="section-header" onclick="toggleSection(this)">
-    <span class="section-num">4.3.6c</span>
-    <span class="section-title">Development Models — Harrod-Domar, Lewis, Rostow, Prebisch-Singer</span>
-    <span class="toggle-icon">▼</span>
+    <span class="section-num">4.3.6 &#8212; 2b</span>
+    <span class="section-title">Non-Economic Constraints on Growth and Development</span>
+    <span class="toggle-icon">&#9660;</span>
   </div>
   <div class="section-body">
-    <h2>Harrod-Domar Growth Model</h2>
-    <div class="def-box"><strong>Harrod-Domar (Roy Harrod 1939, Evsey Domar 1946):</strong> GDP growth depends on the savings rate (s) and the capital-output ratio (k). Higher savings finance investment; investment adds capital; capital raises output. The main constraint on growth in developing countries is insufficient savings to finance needed investment.</div>
-    <div class="formula">Growth rate (g) = s / k <span>— where s = savings rate (%), k = capital-output ratio (units of capital per unit of GDP)</span></div>
-    <p><strong>Example:</strong> If s = 12% and k = 4, then g = 3%. To achieve 5% growth with k = 4, the economy needs s = 20%. If domestic savings only produce s = 10%, there is a "financing gap" of 10% of GDP — which must be filled by foreign aid, FDI, or external borrowing.</p>
-    <p><strong>Policy implication (Sachs, 2005):</strong> Foreign aid can plug the savings/financing gap and escape the poverty trap by funding the investment needed for self-sustaining growth. This was the theoretical foundation for large-scale development aid programmes in the 1950s–70s.</p>
+    <p style="font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent);background:rgba(27,92,181,.08);border:1px solid rgba(27,92,181,.2);padding:.12rem .45rem;border-radius:3px;display:inline-block;margin-bottom:.75rem;">SPEC: 4.3.6 &#8212; 2b &#8212; corruption, poor governance, civil wars, migration, terrorism</p>
 
-    <h3>Evaluation of Harrod-Domar</h3>
+    <h2>Corruption</h2>
+    <div class="def-box"><strong>Corruption:</strong> The abuse of entrusted power for private gain &#8212; bribery, embezzlement, nepotism, and manipulation of contracts and regulations. Raises transaction costs, misallocates resources, and deters investment.</div>
+    <ul>
+      <li>Public funds embezzled &#8594; roads, schools, hospitals not built; medicines not purchased</li>
+      <li>Firms pay &#8220;speed money&#8221; to operate &#8212; functions as a private tax on enterprise, reducing profitability and investment incentives</li>
+      <li>Contracts awarded to connected firms rather than most efficient &#8594; lower-quality public works at higher cost</li>
+      <li>FDI deterred &#8212; investors prefer transparent, stable jurisdictions with predictable costs</li>
+    </ul>
+    <p>Transparency International CPI: most corrupt countries (Somalia, South Sudan, Syria) are consistently among the world&#8217;s poorest. Causality is bidirectional &#8212; poverty generates corruption by creating incentives for officials to supplement low salaries &#8212; making it extremely difficult to escape without simultaneous governance reform and economic development.</p>
+
+    <h2>Poor Governance</h2>
+    <p>Good governance &#8212; accountable, transparent, and effective government &#8212; is foundational to development. Poor governance encompasses: weak rule of law (contracts not enforced, property rights insecure), unaccountable political systems (no electoral check on behaviour), ineffective public administration (policies not implemented), and regulatory failure (markets poorly supervised).</p>
+    <p>Acemoglu, Johnson &amp; Robinson (2001): institutions &#8212; the formal and informal rules of society &#8212; are the primary long-run determinant of development outcomes. Extractive institutions (concentrated power, insecure property rights, elite capture) persistently produce underdevelopment. Inclusive institutions (broad property rights, rule of law, political pluralism) sustain growth. North vs South Korea: starting from identical institutions in 1945, divergent institutions since the 38th parallel split produced radically different development outcomes.</p>
+
+    <h2>Civil Wars</h2>
+    <p>Civil conflict is one of the most devastating constraints on development. Paul Collier (<em>The Bottom Billion</em>, 2007): civil war is one of the four key &#8220;development traps.&#8221;</p>
+    <ul>
+      <li><strong>Destruction of capital:</strong> Infrastructure, factories, hospitals, and schools physically destroyed &#8212; reversing decades of investment</li>
+      <li><strong>Human displacement:</strong> Refugees and IDPs lose livelihoods; children&#8217;s schooling disrupted &#8212; permanent human capital loss</li>
+      <li><strong>FDI deterrence:</strong> Investment requires security &#8212; civil war makes long-run investment impossible</li>
+      <li><strong>Government spending diverted:</strong> Military spending crowds out health, education, and infrastructure</li>
+      <li><strong>Conflict trap:</strong> Countries emerging from civil war have a 44% probability of returning to conflict within 5 years &#8212; poverty &#8594; grievances &#8594; conflict &#8594; more poverty. Breaking the cycle requires rapid job creation and justice/reconciliation, not just economic policy.</li>
+    </ul>
+    <p><strong>Sahel example:</strong> Terrorist insurgencies in Mali, Burkina Faso, and Niger (Al-Qaeda and Islamic State affiliates) since 2012 have reversed development gains &#8212; school closures, farmer displacement, and aid worker withdrawal have pushed millions into acute food insecurity.</p>
+
+    <h2>Migration (Non-Economic Aspects)</h2>
+    <p>Migration&#8217;s economic effects (remittances vs brain drain) are covered under economic constraints. The non-economic development consequences include:</p>
+    <ul>
+      <li><strong>Social disruption:</strong> Large-scale emigration of young workers disrupts community structures and leaves elderly populations without care &#8212; reducing social capital in origin countries</li>
+      <li><strong>Governance brain drain:</strong> When educated professionals (civil servants, lawyers, accountants) emigrate, institutional capacity is depleted &#8212; government services deteriorate even if GDP is stable</li>
+      <li><strong>Forced migration (refugees):</strong> Conflict-driven displacement disrupts children&#8217;s education, destroys social networks, and causes lasting psychological trauma &#8212; with long-run impacts on human capital and social cohesion in origin and host countries alike</li>
+    </ul>
+
+    <h2>Terrorism</h2>
+    <p>Terrorism constrains development through multiple channels beyond direct casualties:</p>
+    <ul>
+      <li><strong>Tourism collapse:</strong> Tourist arrivals fall sharply after attacks. Tunisia: HDI improvement stalled after the 2015 Sousse and Bardo attacks &#8212; tourism revenue fell &gt;25% in one year. Egypt&#8217;s tourism industry similarly devastated after the 2015 Sinai plane bombing.</li>
+      <li><strong>FDI deterrence:</strong> Political risk scores decline &#8594; multinationals relocate to more stable jurisdictions</li>
+      <li><strong>Security spending:</strong> Government resources diverted from development investment to counter-terrorism and military &#8212; crowding out social spending</li>
+      <li><strong>Trade disruption:</strong> Terrorism in key corridors raises insurance and security costs for exporters &#8212; equivalent to a trade cost increase</li>
+      <li><strong>Human capital loss:</strong> Not just direct casualties &#8212; fear reduces labour mobility, education attendance, and economic participation broadly</li>
+    </ul>
+
+    <div class="exam-tip">Non-economic factors are consistently underweighted in exam answers. The spec lists all five explicitly. For each, explain the <em>mechanism</em> through which it constrains development &#8212; don&#8217;t just name it. The key evaluative insight: &#8220;Non-economic constraints are often more fundamental than economic ones because they determine whether economic policy can be effective at all. Capital can be transferred via aid; good institutions cannot.&#8221; Cite Acemoglu for governance and Collier for conflict.</div>
+  </div>
+</div>
+
+<!-- SECTION 4: MARKET STRATEGIES -->
+<div class="section-block" id="market-strategies">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.6 &#8212; 3a</span>
+    <span class="section-title">Market-Orientated Strategies</span>
+    <span class="toggle-icon">&#9660;</span>
+  </div>
+  <div class="section-body">
+    <p style="font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent);background:rgba(27,92,181,.08);border:1px solid rgba(27,92,181,.2);padding:.12rem .45rem;border-radius:3px;display:inline-block;margin-bottom:.75rem;">SPEC: 4.3.6 &#8212; 3a &#8212; trade liberalisation, FDI, removal of subsidies, privatisation, floating exchange rates, microfinance</p>
+    <p>Market-orientated strategies rely on price signals and private initiative rather than government direction. Associated with the <strong>Washington Consensus</strong> (Williamson, 1989) &#8212; 10 market-liberal reforms promoted by the IMF, World Bank, and US Treasury from the 1980s.</p>
+
+    <h2>Trade Liberalisation</h2>
+    <p>Reducing or eliminating tariffs, quotas, and non-tariff barriers. Theoretical basis: Ricardo&#8217;s comparative advantage &#8212; specialise in relatively lower-cost goods and trade for others &#8594; mutual gains.</p>
     <div class="pro-con">
-      <div class="pro">
-        <strong>✓ Strengths</strong>
-        <ul>
-          <li>Correctly identifies investment as central to growth</li>
-          <li>Provides clear quantifiable policy target (savings rate needed)</li>
-          <li>Justifies external finance (aid, FDI) for poor countries</li>
-          <li>Simple, tractable — widely used by multilaterals</li>
-        </ul>
-      </div>
-      <div class="con">
-        <strong>✗ Limitations</strong>
-        <ul>
-          <li>Fixed k: ignores TFP — most long-run growth is technology-driven (Solow 1956)</li>
-          <li>Investment ≠ growth: needs absorptive capacity, good institutions, human capital</li>
-          <li>Easterly (2001): aid-funded investment has not reliably raised growth</li>
-          <li>Ignores diminishing returns to capital — can't explain long-run growth</li>
-        </ul>
-      </div>
+      <div class="pro"><strong>Benefits</strong><ul>
+        <li>Access to global markets enables scale economies</li>
+        <li>Import competition forces domestic efficiency</li>
+        <li>Technology transfer via imported capital goods</li>
+        <li>Lower import prices for consumers and producers</li>
+        <li>Export-led growth: South Korea, Taiwan, China exploited open markets</li>
+      </ul></div>
+      <div class="con"><strong>Limitations</strong><ul>
+        <li>Prebisch-Singer: comparative advantage in commodities &#8594; deteriorating ToT</li>
+        <li>Infant industry problem: nascent industries destroyed before developing</li>
+        <li>Asymmetric: OECD agricultural subsidies (CAP, US farm bill) create unfair competition</li>
+        <li>Premature capital account liberalisation &#8594; Asia 1997 crisis</li>
+      </ul></div>
     </div>
 
-    <h2>W. Arthur Lewis: Dual-Sector Model (1954)</h2>
-    <div class="def-box"><strong>Lewis dual-sector model:</strong> Developing economies have two sectors: (1) a <strong>traditional agricultural sector</strong> with surplus labour (workers at subsistence wage, marginal product ≈ 0); (2) a <strong>modern industrial sector</strong> that can absorb this labour at a wage slightly above subsistence. As capitalists reinvest profits, the industrial sector expands, drawing more labour from agriculture. Development = structural transformation from agriculture to industry.</div>
-    <p>The <strong>Lewis turning point</strong>: the moment when all surplus agricultural labour is absorbed into industry. At this point, further labour reallocation requires real wage increases — ending the era of cheap labour-driven growth. China is widely cited as having approached or reached this turning point in the 2000s–2010s, explaining rising Chinese wages and the shift to more consumption-driven growth.</p>
-
-    <h3>Evaluation of Lewis</h3>
-    <ul>
-      <li><strong>Empirically powerful:</strong> Describes East Asian industrialisation well — Japan (1950s–60s), South Korea (1960s–80s), China (1980s–2010s) all followed a Lewis-type structural transformation path.</li>
-      <li><strong>Agricultural MLP assumption:</strong> The Green Revolution raised agricultural productivity dramatically — the surplus labour assumption is empirically weaker. Agricultural growth can itself drive development.</li>
-      <li><strong>Profit repatriation:</strong> If the industrial sector is dominated by foreign MNCs, profits are repatriated rather than reinvested locally — breaking the reinvestment mechanism.</li>
-      <li><strong>Urban poverty traps (Harris-Todaro, 1970):</strong> Migration creates urban slums if industrial job creation is slower than rural-urban migration. Expected urban wages (probability of employment × wage) must equal rural wages for equilibrium — but en route, large urban unemployment can emerge.</li>
-    </ul>
-
-    <h2>Rostow's Stages of Economic Growth (1960)</h2>
-    <div class="def-box"><strong>Rostow's five stages:</strong> (1) Traditional society; (2) Preconditions for take-off (transport infrastructure, agricultural surplus, entrepreneurial class emerges); (3) <strong>Take-off</strong> — investment rate rises above 10%, rapid industrialisation; (4) Drive to maturity (technology spreads, diversification); (5) Age of high mass consumption (consumer goods dominate, high living standards). All countries follow this linear sequence.</div>
-    <p><strong>Evaluation:</strong> Too linear — assumes all countries follow the Western path. Ignores institutional variation and path dependence. Criticised as Cold War ideology — presenting capitalism as the only route to development, countering Soviet central planning. Contradicted by East Asian development experience, which used heavy state direction rather than free markets. Chang (2002): today's developed nations "kicked away the ladder" of state intervention that they themselves used.</p>
-
-    <h2>Prebisch-Singer Hypothesis (1950)</h2>
-    <div class="def-box"><strong>Prebisch-Singer hypothesis:</strong> Primary commodity export prices decline relative to manufactured goods prices over the long run, because: (1) income elasticity of demand for commodities is low — demand grows slowly as incomes rise (Engels' Law); (2) technological progress in commodities reduces prices rather than raising wages; (3) manufacturing workers capture productivity gains through union bargaining, while agricultural workers cannot. Result: terms of trade deteriorate structurally for commodity exporters.</div>
-    <p><strong>Policy implication — Import Substitution Industrialisation (ISI):</strong> Rather than specialising in commodities, developing countries should use tariffs and subsidies to protect infant industries and diversify into manufacturing. Implemented in Latin America (1950s–70s): Brazil, Mexico, Argentina. Mixed results — some industries developed, but many became permanently inefficient and subsidy-dependent, contributing to debt crises in the 1980s.</p>
-    <div class="exam-tip">Prebisch-Singer is essential for any essay on developing country trade, comparative advantage, or growth strategy. Key evaluation: commodity prices experienced a "super-cycle" of rising prices in the 2000s (driven by Chinese demand), temporarily contradicting the hypothesis. But since ~2011 commodity prices have fallen again. The long-run trend remains broadly consistent with the hypothesis, but the timing and magnitude vary significantly.</div>
-  </div>
-</div>
-
-<!-- ═══ SECTION 4 ═══ -->
-<div class="section-block" id="strategies">
-  <div class="section-header" onclick="toggleSection(this)">
-    <span class="section-num">4.3.6d</span>
-    <span class="section-title">Market-Led vs Interventionist Development Strategies</span>
-    <span class="toggle-icon">▼</span>
-  </div>
-  <div class="section-body">
-    <h2>The Washington Consensus (Market-Led)</h2>
-    <div class="def-box"><strong>Washington Consensus (Williamson, 1989):</strong> Ten market-liberal reforms promoted by IMF, World Bank, and US Treasury: fiscal discipline, trade liberalisation, FDI liberalisation, privatisation, deregulation, secure property rights, tax reform (lower marginal rates, broader base), financial liberalisation, competitive exchange rates, and redirecting public spending towards health and education.</div>
-    <p>Underlying logic: markets efficiently allocate resources; comparative advantage dictates production; FDI brings capital and technology; the state's role is to provide a stable macroeconomic environment with secure property rights, not to direct the economy.</p>
-
+    <h2>Promotion of FDI</h2>
+    <p>Attracting Foreign Direct Investment via Export Processing Zones (EPZs), tax holidays, bilateral investment treaties, and repatriation guarantees.</p>
     <div class="pro-con">
-      <div class="pro">
-        <strong>✓ Case for market-led strategy</strong>
-        <ul>
-          <li>Comparative advantage: trade allows specialisation and efficiency gains</li>
-          <li>FDI: brings capital, technology, and management knowledge</li>
-          <li>Competition disciplines inefficiency and reduces rent-seeking</li>
-          <li>Avoids government failure — public sector capture, corruption, misallocation</li>
-          <li>Chile post-1973: structural reforms produced fastest Latin American growth in 1990s</li>
-        </ul>
-      </div>
-      <div class="con">
-        <strong>✗ Criticisms (post-Washington Consensus)</strong>
-        <ul>
-          <li>Structural adjustment: IMF conditions cut health/education spending, worsening poverty</li>
-          <li>Premature capital account liberalisation triggered Asia 1997 crisis (Stiglitz)</li>
-          <li>Privatisation without competition created private monopolies</li>
-          <li>Comparative advantage may lock countries into commodities (Prebisch-Singer)</li>
-          <li>"Lost decade" in Latin America after SAPs in 1980s — negative growth in many countries</li>
-        </ul>
-      </div>
+      <div class="pro"><strong>Benefits</strong><ul>
+        <li>Fills Harrod-Domar savings gap with foreign capital</li>
+        <li>Technology and management spillovers to domestic firms</li>
+        <li>Employment creation and wage income</li>
+        <li>Integration into global value chains (GVCs)</li>
+        <li>Reduces foreign exchange gap directly</li>
+      </ul></div>
+      <div class="con"><strong>Limitations</strong><ul>
+        <li>Transfer pricing: profits shifted abroad &#8594; limited tax revenue (OECD BEPS)</li>
+        <li>Enclave FDI: resource extraction, minimal local linkages</li>
+        <li>Dutch Disease: commodity FDI appreciates exchange rate</li>
+        <li>Technology spillovers require absorptive capacity &#8212; limited without human capital</li>
+      </ul></div>
     </div>
 
-    <h2>Interventionist (Developmental State) Strategy</h2>
-    <p>Governments in East Asia actively directed development: South Korea, Taiwan, and Japan used <strong>industrial policy</strong> — targeting credit to strategic sectors, infant industry protection, export promotion, and investment in education and infrastructure. Wade (1990): "governing the market" rather than freeing it produced superior development outcomes.</p>
-    <h3>Import Substitution Industrialisation (ISI)</h3>
-    <p>Protect domestic infant industries via tariffs, quotas, and subsidies. Allow industries to develop scale economies and learning-by-doing before exposing them to global competition. Problems: protected industries may never become competitive (rent-seeking); overvalued exchange rates needed to fund capital imports harm agricultural and export sectors; worked for some countries (Brazil's car industry) but failed in many others.</p>
-    <h3>Export-Led Growth (ELG)</h3>
-    <p>Competitive exchange rates, export processing zones, and WTO membership attract FDI and develop manufacturing export capacity. Forces firms to compete internationally, driving quality improvement. South Korea, Taiwan, China, Vietnam all used ELG successfully. Requires: absorptive human capital, domestic content in FDI, avoiding Dutch Disease.</p>
-
-    <div class="exam-tip">The false dichotomy: the most successful developers used <em>selective state intervention</em>, not pure ISI or pure Washington Consensus. South Korea used infant industry protection but with strict export performance requirements — protection was conditional and time-limited. Rodrik (2004): "industrial policy is not about picking winners — it is about finding and correcting market failures in the process of structural transformation." Use this to write sophisticated, nuanced conclusions.</div>
-  </div>
-</div>
-
-<!-- ═══ SECTION 5 ═══ -->
-<div class="section-block" id="institutions">
-  <div class="section-header" onclick="toggleSection(this)">
-    <span class="section-num">4.3.6e</span>
-    <span class="section-title">Institutions, Property Rights &amp; Governance</span>
-    <span class="toggle-icon">▼</span>
-  </div>
-  <div class="section-body">
-    <h2>Why Institutions Are Foundational</h2>
-    <div class="def-box"><strong>Institutions (North, 1990):</strong> The "rules of the game" — formal rules (laws, property rights, constitutions) and informal norms (culture, trust, social capital) that shape incentives and economic behaviour. Good institutions lower transaction costs, secure returns to investment, and enable markets to function.</div>
-
-    <div class="def-box"><strong>Acemoglu, Johnson &amp; Robinson (2001):</strong> Used settler mortality as an instrument for institutional quality. Where European colonisers settled permanently (temperate climates — North America, Australia), they built <strong>inclusive institutions</strong>: broad property rights, rule of law, accountable government. Where mortality was high (tropical Africa, Latin America), they built <strong>extractive institutions</strong> — designed to transfer resources to Europe. These institutions persisted, explaining most present-day income variation across countries.</div>
-
-    <div class="def-box"><strong>Inclusive institutions:</strong> Broad property rights, rule of law, competitive markets, political pluralism → incentivise investment and innovation, enable creative destruction, sustain long-run growth.<br><br><strong>Extractive institutions:</strong> Concentrated power, insecure property rights, elite capture of resources → low investment incentives → poverty trap → further elite entrenchment (vicious circle).</div>
-
-    <h3>Property Rights and De Soto (2000)</h3>
-    <p>Hernando De Soto: the poor in developing countries often physically possess assets — land, homes — but without legal title. They cannot use these as collateral, sell them at market prices, or attract investment. Formalising property rights releases this "dead capital" — estimated at $9.3 trillion globally. Land titling programmes in Peru and Cambodia showed mixed results — increases in investment and credit access were smaller than De Soto predicted, suggesting property rights alone are insufficient without functioning credit markets and rule of law.</p>
-
-    <h3>Corruption</h3>
-    <p>Corruption increases transaction costs, distorts resource allocation (investment goes to well-connected rather than most productive firms), and deters FDI. Transparency International CPI: countries with high corruption (Afghanistan, South Sudan, Somalia) are consistently among the world's poorest. Causality is bidirectional: poverty generates corruption by lowering civil service wages and weakening accountability mechanisms — making it very difficult to escape without external intervention.</p>
-  </div>
-</div>
-
-<!-- ═══ SECTION 6 ═══ -->
-<div class="section-block" id="aid">
-  <div class="section-header" onclick="toggleSection(this)">
-    <span class="section-num">4.3.6f</span>
-    <span class="section-title">Aid, IMF, World Bank, NGOs &amp; Debt Relief</span>
-    <span class="toggle-icon">▼</span>
-  </div>
-  <div class="section-body">
-    <h2>Official Development Assistance (ODA)</h2>
-    <div class="def-box"><strong>ODA (Aid):</strong> Concessional financial flows (grants or low-interest loans) from developed country governments to developing countries — bilateral (government-to-government) or multilateral (via World Bank, UN agencies). UN target: 0.7% of GNI. Only Denmark, Sweden, Norway, and Luxembourg consistently meet this target. UK reached it in 2013 but subsequently cut to 0.5%.</div>
-
+    <h2>Removal of Government Subsidies</h2>
+    <p>Rationale: subsidies distort price signals, protect inefficient producers, and misallocate resources. Removing them forces efficiency and frees fiscal resources for more productive investment.</p>
     <div class="pro-con">
-      <div class="pro">
-        <strong>✓ Case for aid (Sachs 2005)</strong>
-        <ul>
-          <li>Fills Harrod-Domar financing gap — provides savings LDCs lack domestically</li>
-          <li>Direct health/education funding → immediate human capital gains</li>
-          <li>Can escape poverty traps by funding complementary investments simultaneously</li>
-          <li>Targeted interventions with strong RCT evidence: bed nets, ORS, vaccinations (Banerjee &amp; Duflo)</li>
-          <li>PEPFAR (HIV/AIDS): measurable lives saved, health outcomes improved</li>
-        </ul>
-      </div>
-      <div class="con">
-        <strong>✗ Case against aid (Easterly, Moyo)</strong>
-        <ul>
-          <li>Easterly (2006): despite $2.3 trillion in aid since 1960, many recipients remain poor</li>
-          <li>Moyo (2009): aid perpetuates bad governance — governments accountable to donors not citizens</li>
-          <li>Dependency: reduces incentive for domestic revenue mobilisation</li>
-          <li>Dutch Disease: large inflows appreciate exchange rate → hurts export competitiveness</li>
-          <li>Fungibility: aid frees government resources for military/elite consumption</li>
-        </ul>
-      </div>
+      <div class="pro"><strong>Efficiency case</strong><ul>
+        <li>Removes distortions &#8212; price signals direct resources to highest-value uses</li>
+        <li>Frees government budget for infrastructure and education</li>
+        <li>Eliminates rent-seeking by subsidy recipients</li>
+        <li>Improves public finances &#8212; reduces deficit/debt</li>
+      </ul></div>
+      <div class="con"><strong>Risks</strong><ul>
+        <li>Food and energy subsidies protect the poor &#8212; removal causes immediate hardship</li>
+        <li>Sudden removal can cause social unrest (Egypt bread subsidies, India fuel subsidies)</li>
+        <li>Agricultural subsidies support food security &#8212; removal exposes farmers to price volatility</li>
+        <li>Infant industries may legitimately need temporary subsidy support</li>
+      </ul></div>
     </div>
 
-    <h2>IMF and World Bank</h2>
-    <div class="def-box"><strong>IMF:</strong> Provides short-term balance of payments support — typically conditional on fiscal austerity, monetary tightening, and structural adjustment. Criticism (Stiglitz 2002): imposed "market fundamentalism," premature financial liberalisation, and contractionary policies on vulnerable economies → deepened crises.</div>
-    <div class="def-box"><strong>World Bank:</strong> Long-term development finance — concessional IDA loans for poorest countries. Finances infrastructure, health, education, governance. Less condition-laden than IMF; more developmental focus. Increasingly uses results-based lending and randomised evaluations.</div>
+    <h2>Privatisation</h2>
+    <p>Transferring state-owned enterprises (SOEs) to private ownership. Rationale: private firms face profit motive, competition, and capital market discipline &#8212; more efficient than state enterprises insulated from market pressure.</p>
+    <div class="pro-con">
+      <div class="pro"><strong>Potential benefits</strong><ul>
+        <li>Profit motive reduces waste and overstaffing</li>
+        <li>Reduces fiscal burden of loss-making SOEs</li>
+        <li>Generates one-off revenue (privatisation proceeds)</li>
+        <li>Private management expertise and investment</li>
+      </ul></div>
+      <div class="con"><strong>Limitations in LDC context</strong><ul>
+        <li>Without competition, private monopoly replaces public monopoly</li>
+        <li>Natural monopolies (water, electricity, rail): profit motive conflicts with universal service</li>
+        <li>Weak regulatory capacity in LDCs &#8212; privatised firms are poorly supervised</li>
+        <li>Social objectives (rural access, affordability) may be abandoned for profit</li>
+      </ul></div>
+    </div>
 
-    <h2>NGOs</h2>
-    <p>Non-Governmental Organisations (Oxfam, MSF, BRAC, CARE) deliver development services where governments are absent or ineffective. Advantages: flexible, innovative, often more accountable to beneficiaries. Limitations: not democratically elected; may duplicate government services and undermine state capacity-building; operations fragmented and unable to achieve systemic change. BRAC (Bangladesh) is the world's largest NGO and shows NGOs can operate at scale — 100+ million beneficiaries across health, microfinance, education.</p>
+    <h2>Floating Exchange Rate Systems</h2>
+    <p>Exchange rate determined by supply and demand in currency markets without central bank intervention. Rationale: automatic adjustment to external shocks restores competitiveness without policy action.</p>
+    <div class="pro-con">
+      <div class="pro"><strong>Benefits</strong><ul>
+        <li>Automatic adjustment: commodity price fall &#8594; depreciation &#8594; exports cheaper &#8594; competitiveness restored</li>
+        <li>Independent monetary policy retained (Mundell&#8217;s trilemma)</li>
+        <li>No need for large foreign exchange reserves to defend a peg</li>
+        <li>Avoids currency crises from defending an overvalued fixed rate</li>
+      </ul></div>
+      <div class="con"><strong>Limitations for LDCs</strong><ul>
+        <li>Volatility deters trade and investment &#8212; creates uncertainty for exporters/importers</li>
+        <li>Depreciation raises import prices &#8594; inflation (especially for food and fuel importers)</li>
+        <li>Speculative capital flows cause excessive volatility in thin LDC currency markets</li>
+        <li>Commodity exporters: large swings in domestic revenue as commodity prices change</li>
+      </ul></div>
+    </div>
+
+    <h2>Microfinance Schemes</h2>
+    <div class="def-box"><strong>Microfinance:</strong> Small loans, savings accounts, and insurance for individuals excluded from formal banking &#8212; particularly the rural poor without collateral. Pioneered by Muhammad Yunus and the Grameen Bank, Bangladesh (1983). Group lending model: small groups (typically 5 women) are collectively responsible &#8212; social pressure substitutes for collateral. Average loan ~$200; repayment rates historically 97%+.</div>
+    <div class="pro-con">
+      <div class="pro"><strong>Potential benefits</strong><ul>
+        <li>Expands credit access for those excluded from formal banking</li>
+        <li>Enables micro-enterprise investment &#8212; small businesses generating income</li>
+        <li>Women-focused: improves female economic agency and empowerment</li>
+        <li>Reduces dependence on informal moneylenders (50&#8211;200% interest)</li>
+        <li>Mobile microfinance (M-Shwari, Kenya) dramatically reduces delivery costs</li>
+      </ul></div>
+      <div class="con"><strong>Limitations</strong><ul>
+        <li>Banerjee &amp; Duflo RCT evidence: microfinance has not consistently lifted borrowers out of poverty</li>
+        <li>Interest rates still 20&#8211;40% in many schemes &#8212; limits net investment return</li>
+        <li>Over-indebtedness: competing MFIs &#8594; multiple loans &#8594; debt spiral</li>
+        <li>Group pressure causes social harm when members cannot repay</li>
+        <li>Micro-enterprises face demand ceiling &#8212; credit alone cannot overcome infrastructure and market access barriers</li>
+      </ul></div>
+    </div>
+    <div class="exam-tip">Essential microfinance evaluation: &#8220;Banerjee and Duflo (2011, <em>Poor Economics</em>) conducted RCTs in multiple countries and found that while microfinance expanded credit access, it did not consistently increase household incomes or lift borrowers out of poverty. The most significant impact was reducing reliance on very high-cost informal credit. Microfinance is a useful poverty-alleviation tool, but not a development strategy on its own.&#8221;</div>
+  </div>
+</div>
+
+<!-- SECTION 5: INTERVENTIONIST STRATEGIES -->
+<div class="section-block" id="interventionist">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.6 &#8212; 3b</span>
+    <span class="section-title">Interventionist Development Strategies</span>
+    <span class="toggle-icon">&#9660;</span>
+  </div>
+  <div class="section-body">
+    <p style="font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent);background:rgba(27,92,181,.08);border:1px solid rgba(27,92,181,.2);padding:.12rem .45rem;border-radius:3px;display:inline-block;margin-bottom:.75rem;">SPEC: 4.3.6 &#8212; 3b &#8212; human capital, protectionism, managed exchange rates, infrastructure, joint ventures, buffer stocks</p>
+
+    <h2>Development of Human Capital</h2>
+    <p>Government investment in education and healthcare is the foundational supply-side intervention. Human capital theory (Mincer 1958, Becker 1964): each year of education raises worker productivity and earnings by ~8&#8211;10% (UNICEF). Investment in girls&#8217; education has the highest social return: reduces fertility, improves child health outcomes, and increases female labour force participation. South Korea expanded tertiary education in the 1960s&#8211;80s to create the skilled workforce that powered electronics and automotive export industries.</p>
+
+    <h2>Protectionism &#8212; Infant Industry Argument</h2>
+    <div class="def-box"><strong>Infant industry argument:</strong> New domestic industries cannot compete with established foreign firms that benefit from economies of scale, learning-by-doing, and existing supply chains. Temporary protection (tariffs, subsidies, import quotas) allows infant industries time to develop scale and efficiency until they become internationally competitive. Associated with Hamilton (1791), List (1841), and the East Asian developmental state.</div>
+    <p><strong>South Korean model:</strong> Government selected strategic industries (POSCO steel, Hyundai shipbuilding, Samsung electronics) and provided: protected domestic markets via tariffs; directed credit at below-market rates; export subsidies; public R&amp;D. Crucially, protection was <em>conditional on export performance</em> &#8212; firms that failed to become competitive lost support. South Korea went from $80 per capita income in 1960 to OECD membership by 2000.</p>
+    <div class="pro-con">
+      <div class="pro"><strong>Case for infant industry protection</strong><ul>
+        <li>Allows firms to develop scale economies before global competition</li>
+        <li>Learning-by-doing: productivity improves with cumulative experience</li>
+        <li>Overcomes coordination failures: complementary industries must develop together</li>
+        <li>Chang (2002): all current developed nations industrialised behind tariff walls &#8212; &#8220;kicking away the ladder&#8221;</li>
+        <li>Dynamic comparative advantage: protection creates future competitive sectors</li>
+      </ul></div>
+      <div class="con"><strong>Limitations</strong><ul>
+        <li>Government failure: difficult to correctly identify which industries to protect &#8212; information problem</li>
+        <li>Rent-seeking: protected industries lobby to maintain protection permanently</li>
+        <li>Latin American ISI: many industries remained uncompetitive for decades, contributing to 1980s debt crises</li>
+        <li>Retaliation risk: trading partners may impose retaliatory tariffs</li>
+        <li>Consumer welfare loss: higher prices for protected goods</li>
+      </ul></div>
+    </div>
+
+    <h2>Managed Exchange Rates</h2>
+    <p>Government or central bank intervenes in currency markets to maintain a target rate or limit volatility. Types: fixed pegs, managed floats, currency boards. Development rationale: an <strong>undervalued exchange rate</strong> acts as an implicit subsidy to all export industries &#8212; makes exports cheaper on world markets, supporting export-led growth. China maintained an undervalued Renminbi through the 1990s&#8211;2000s, supporting manufacturing export competitiveness.</p>
+    <div class="pro-con">
+      <div class="pro"><strong>Benefits</strong><ul>
+        <li>Reduces exchange rate volatility &#8594; lowers uncertainty for exporters and importers</li>
+        <li>Undervalued rate boosts export competitiveness &#8212; supports industrialisation</li>
+        <li>Signals price stability &#8212; anchors inflation expectations</li>
+        <li>Prevents speculative attack in thin LDC currency markets</li>
+      </ul></div>
+      <div class="con"><strong>Risks</strong><ul>
+        <li>Requires large foreign exchange reserves to defend the rate</li>
+        <li>Overvalued rate: exports uncompetitive &#8594; BoP deteriorates &#8594; forced sharp devaluation</li>
+        <li>Sacrifices independent monetary policy (Mundell&#8217;s trilemma)</li>
+        <li>&#8220;Currency manipulation&#8221; label from trading partners &#8594; retaliatory tariffs</li>
+      </ul></div>
+    </div>
+
+    <h2>Infrastructure Development</h2>
+    <p>Government investment in roads, railways, ports, power generation, water supply, and telecoms. Addresses market failures: natural monopoly (private firms under-provide), positive externalities (infrastructure benefits all users), and public good characteristics. Reduces transaction costs and enables all other investment to be more productive.</p>
+    <p>Ethiopia&#8217;s government-led infrastructure investment (roads, rail, telecom, hydro dams) in the 2000s&#8211;2010s contributed to consistent 8&#8211;10% GDP growth &#8212; fastest in Sub-Saharan Africa. China&#8217;s Belt and Road Initiative exports this model &#8212; financing infrastructure in developing countries as part of a geopolitical and commercial strategy. World Bank: 1% increase in infrastructure investment &#8594; ~1.5% long-run GDP gain in LDCs.</p>
+
+    <h2>Promoting Joint Ventures with TNCs</h2>
+    <div class="def-box"><strong>Joint venture with a TNC:</strong> A partnership between a domestic firm (or government) and a transnational corporation, where both parties contribute capital and expertise and share profits and risks. Government mandates or incentivises JVs as a condition of market access &#8212; ensuring technology transfer and skills development that would not occur with wholly foreign-owned subsidiaries.</div>
+    <p><strong>China&#8217;s JV model (1980s&#8211;2000s):</strong> Foreign car manufacturers (VW, GM, Toyota) were required to form 50:50 JVs with Chinese state-owned firms to access the Chinese market. This forced technology transfer to Chinese partners. Chinese firms (BYD, Geely) have since developed the capacity to produce competitive vehicles independently.</p>
+    <div class="pro-con">
+      <div class="pro"><strong>Benefits</strong><ul>
+        <li>Forces technology and management skill transfer to domestic partner</li>
+        <li>Retains partial domestic ownership &#8212; profits not fully repatriated</li>
+        <li>Builds local supply chain linkages</li>
+        <li>Domestic partner gains access to TNC&#8217;s global distribution networks</li>
+      </ul></div>
+      <div class="con"><strong>Limitations</strong><ul>
+        <li>TNCs may ring-fence core technology &#8212; transfer only older processes</li>
+        <li>Mandating JVs may deter FDI if TNCs prefer wholly owned subsidiaries</li>
+        <li>Domestic partner may lack absorptive capacity</li>
+        <li>WTO disputes: US&#8211;China trade war partly driven by forced technology transfer allegations</li>
+      </ul></div>
+    </div>
+
+    <h2>Buffer Stock Schemes</h2>
+    <div class="def-box"><strong>Buffer stock scheme:</strong> A government or international body buys and stores a commodity when its price falls below a target floor price, and sells from stores when the price rises above a target ceiling price. Stabilises commodity prices within a band, protecting producer incomes in LDCs from price volatility.</div>
+    <p><strong>Mechanism:</strong> Price falls below floor &#8594; buffer stock manager buys &#8594; demand increases &#8594; price supported. Price rises above ceiling &#8594; buffer stock manager sells &#8594; supply increases &#8594; price restrained. Price stabilised within floor&#8211;ceiling band.</p>
+    <div class="pro-con">
+      <div class="pro"><strong>Potential benefits</strong><ul>
+        <li>Stabilises commodity export revenues &#8212; reduces income volatility for LDC producers</li>
+        <li>Allows producers to plan investment with more predictable incomes</li>
+        <li>Food buffer stocks protect consumers from price spikes &#8212; improves food security</li>
+        <li>Prevents race-to-the-bottom among competing commodity exporters</li>
+      </ul></div>
+      <div class="con"><strong>Problems</strong><ul>
+        <li>Storage costs: physical commodities deteriorate &#8212; especially perishable food</li>
+        <li>If floor is above long-run equilibrium, stocks accumulate indefinitely &#8212; International Tin Agreement collapsed 1985; International Coffee Agreement 1989</li>
+        <li>Structural vs cyclical falls: only sustainable for temporary price swings, not long-run ToT deterioration (Prebisch-Singer)</li>
+        <li>Coordination: non-participating producers free-ride &#8212; sell at supported prices while buffer manager buys</li>
+        <li>Large financial reserves required to fund purchases when prices fall</li>
+      </ul></div>
+    </div>
+    <div class="exam-tip">Buffer stock key evaluation: &#8220;Buffer stock schemes can only function if price fluctuations are cyclical rather than structural. If the Prebisch-Singer hypothesis is correct and commodity prices are on a long-run declining trend, buffer stocks will accumulate indefinitely, eventually exhausting financial reserves and collapsing. This is exactly what happened to virtually all major international commodity agreements in the 20th century. They are at best a temporary stabilisation tool, not a development strategy.&#8221;</div>
+  </div>
+</div>
+
+<!-- SECTION 6: OTHER STRATEGIES -->
+<div class="section-block" id="other-strategies">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.6 &#8212; 3c</span>
+    <span class="section-title">Other Development Strategies</span>
+    <span class="toggle-icon">&#9660;</span>
+  </div>
+  <div class="section-body">
+    <p style="font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent);background:rgba(27,92,181,.08);border:1px solid rgba(27,92,181,.2);padding:.12rem .45rem;border-radius:3px;display:inline-block;margin-bottom:.75rem;">SPEC: 4.3.6 &#8212; 3c &#8212; Lewis model, tourism, primary industries, debt relief, aid</p>
+
+    <h2>Industrialisation &#8212; The Lewis Dual-Sector Model</h2>
+    <div class="def-box"><strong>W. Arthur Lewis (1954):</strong> Developing economies have two sectors: (1) <strong>Traditional agricultural sector</strong> &#8212; surplus labour (workers with MLP &#8776; 0, paid at subsistence wage). Labour can be removed from agriculture with minimal loss of agricultural output. (2) <strong>Modern industrial sector</strong> &#8212; attracts surplus agricultural labour at a wage slightly above subsistence. Industrial profits are reinvested &#8594; sector expands &#8594; absorbs more labour &#8594; structural transformation from agriculture to industry = development.</div>
+    <p><strong>Lewis Turning Point:</strong> When all surplus agricultural labour is absorbed, further labour demand requires real wage increases. At this point wages rise economy-wide, the labour share of income increases, and cheap-labour-driven industrialisation ends. China reached this turning point approximately 2010&#8211;2015 &#8212; explaining rapidly rising Chinese wages and the strategic shift toward higher-value, less labour-intensive production.</p>
+    <div class="pro-con">
+      <div class="pro"><strong>Strengths</strong><ul>
+        <li>Describes East Asian industrialisation well &#8212; Japan, South Korea, China all followed a Lewis-type structural transformation path</li>
+        <li>Identifies reinvestment mechanism &#8212; connects capital accumulation, structural change, and development in one framework</li>
+        <li>Provides policy rationale for attracting industrial investment via EPZs, infrastructure, and FDI incentives</li>
+      </ul></div>
+      <div class="con"><strong>Limitations</strong><ul>
+        <li>Agricultural MLP &#8776; 0 assumption: Green Revolution raised agricultural productivity &#8212; surplus labour assumption weaker than Lewis thought</li>
+        <li>Harris-Todaro (1970): urban unemployment trap &#8212; if industrial job creation lags migration, urban slums grow rather than industrial employment</li>
+        <li>Profit repatriation: MNC-dominated industrial sector &#8594; profits leave country &#8594; Lewis reinvestment mechanism breaks down</li>
+        <li>Assumes passive private sector &#8212; East Asian development actually required active state direction, not just capital availability</li>
+      </ul></div>
+    </div>
+
+    <h2>Development of Tourism</h2>
+    <p>Tourism is a major service export &#8212; tourists spend foreign currency domestically, providing foreign exchange earnings equivalent to goods exports. Key development potential: low capital requirements relative to manufacturing; uses natural and cultural assets already present; creates employment across skill levels.</p>
+    <div class="pro-con">
+      <div class="pro"><strong>Benefits</strong><ul>
+        <li>Foreign exchange earnings &#8212; reduces the foreign currency gap</li>
+        <li>Employment creation in hospitality, transport, retail, services</li>
+        <li>Multiplier effect: tourist spending circulates, supporting further employment</li>
+        <li>Infrastructure development benefits local populations too</li>
+        <li>Diversifies away from commodity dependence using natural/cultural assets</li>
+      </ul></div>
+      <div class="con"><strong>Limitations</strong><ul>
+        <li>Leakage: foreign-owned hotels and imported goods &#8594; revenue leaves country</li>
+        <li>Seasonality: revenue concentrated in peak seasons &#8594; worker income volatility</li>
+        <li>Environmental damage: over-tourism degrades the natural assets that attract visitors</li>
+        <li>Vulnerability: terrorism, pandemics (COVID-19), and political instability collapse arrivals instantly &#8212; Thailand lost 83% of tourists in 2020</li>
+        <li>Low wages: tourism employment often low-skilled and low-paid &#8212; limited human capital development</li>
+      </ul></div>
+    </div>
+
+    <h2>Development of Primary Industries</h2>
+    <p>Rather than immediately industrialising, some countries develop their natural resource base &#8212; mining, agriculture, forestry, fishing &#8212; as a foundation for growth. Primary industry provides: export revenues, government tax income, employment, and foreign exchange to fund future diversification.</p>
+    <div class="pro-con">
+      <div class="pro"><strong>Case for primary industry development</strong><ul>
+        <li>Exploits existing comparative advantage &#8212; uses what the country already has</li>
+        <li>Botswana model: diamond revenues + strong institutions + Debswana (50/50 JV with De Beers) &#8594; upper-middle-income country within 50 years of independence</li>
+        <li>Agricultural development reduces poverty directly: 60&#8211;70% of the world&#8217;s extreme poor are rural farmers &#8212; raising their productivity is the most direct poverty-reduction route</li>
+        <li>Green Revolution: improved seeds, irrigation, fertilisers &#8594; dramatically reduced famine in South Asia, Southeast Asia</li>
+      </ul></div>
+      <div class="con"><strong>Risks</strong><ul>
+        <li>Resource curse: oil/mineral wealth associated with conflict, corruption, weak institutions (Nigeria, DRC, Angola) &#8212; Collier (2007)</li>
+        <li>Dutch Disease: resource export revenues appreciate exchange rate &#8594; other tradeable sectors uncompetitive</li>
+        <li>Prebisch-Singer: commodity ToT deteriorate long-run &#8212; revenues fall relative to import costs over time</li>
+        <li>Price volatility creates macroeconomic instability &#8212; unreliable development base</li>
+      </ul></div>
+    </div>
 
     <h2>Debt Relief</h2>
-    <p>High external debt forces governments to divert public spending to debt service, crowding out social investment. <strong>HIPC Initiative (1996):</strong> IMF/World Bank debt cancellation for qualifying heavily indebted poor countries that implement reform programmes. <strong>MDRI (2006):</strong> Full cancellation of debt to IMF, World Bank, and African Development Bank for HIPC countries. Impact: freed ~$100bn in debt service, enabling public spending shifts. Limitation: conditionality requirements delayed relief; many countries received relief only after prolonged periods of austerity.</p>
+    <div class="def-box"><strong>Debt relief:</strong> Reduction, rescheduling, or cancellation of developing country external debt. Frees government spending from debt service toward development investment. Key initiatives: <strong>HIPC Initiative (1996)</strong> &#8212; IMF and World Bank debt cancellation for qualifying heavily indebted poor countries; <strong>MDRI (2006)</strong> &#8212; full cancellation of debt owed to IMF, World Bank, and African Development Bank for HIPC graduates.</div>
+    <p>Impact: 37 countries have received HIPC relief, saving approximately $100bn in debt service. Post-HIPC countries showed increases in health and education spending as fiscal space opened. Child mortality rates fell and school enrolment increased in many beneficiaries. <em>Limitation:</em> Some countries re-accumulated unsustainable debt through new commercial and Chinese lending after receiving HIPC relief &#8212; problem not permanently solved. Moral hazard: expectation of future relief may encourage over-borrowing.</p>
 
-    <div class="exam-tip">The key evaluative insight on aid: "The debate is not 'is aid good or bad' but 'what type of aid, under what conditions, works?' Banerjee and Duflo (2011, Poor Economics) find that targeted interventions with strong RCT evidence (oral rehydration therapy, bed net distribution, conditional cash transfers) have reliably improved outcomes. General budget support and large infrastructure programmes have much weaker evidence. Institutional context determines whether aid produces development or dependency." This framing impresses examiners far more than a simplistic for/against list.</div>
+    <h2>Aid (ODA)</h2>
+    <div class="def-box"><strong>Official Development Assistance (ODA):</strong> Concessional financial flows (grants or low-interest loans) from developed country governments to developing countries &#8212; bilateral (government-to-government) or multilateral (via World Bank, UNDP, regional development banks). UN target: 0.7% of donor GNI. Only Scandinavia, Luxembourg, and Netherlands consistently meet this. Types: bilateral (often &#8220;tied&#8221; &#8212; must buy donor country goods), multilateral (more needs-based), humanitarian (emergency relief), technical assistance.</div>
+    <div class="pro-con">
+      <div class="pro"><strong>Case for aid &#8212; Sachs (2005)</strong><ul>
+        <li>Fills Harrod-Domar savings/financing gap</li>
+        <li>Targeted interventions have strong RCT evidence: bed nets, oral rehydration therapy, vaccines (Banerjee &amp; Duflo)</li>
+        <li>PEPFAR: measurable reduction in HIV/AIDS mortality in Sub-Saharan Africa</li>
+        <li>Can break poverty traps by funding multiple complementary investments simultaneously</li>
+        <li>HIPC debt relief: measurable improvements in social spending outcomes</li>
+      </ul></div>
+      <div class="con"><strong>Case against aid &#8212; Easterly, Moyo</strong><ul>
+        <li>Easterly (2006): $2.3tn in aid since 1960 &#8212; many recipients remain poor</li>
+        <li>Moyo (2009): aid funds bad governance &#8212; governments accountable to donors, not citizens</li>
+        <li>Dependency: reduces incentives for domestic revenue mobilisation</li>
+        <li>Dutch Disease: large inflows appreciate exchange rate &#8594; export competitiveness harmed</li>
+        <li>Fungibility: aid frees government resources for military or elite spending</li>
+        <li>Tied aid: may reduce real value by 15&#8211;30%</li>
+      </ul></div>
+    </div>
   </div>
 </div>
 
+<!-- SECTION 7: INTERNATIONAL INSTITUTIONS -->
+<div class="section-block" id="institutions">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.6 &#8212; 3d</span>
+    <span class="section-title">International Institutions &#8212; World Bank, IMF &amp; NGOs</span>
+    <span class="toggle-icon">&#9660;</span>
+  </div>
+  <div class="section-body">
+    <p style="font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent);background:rgba(27,92,181,.08);border:1px solid rgba(27,92,181,.2);padding:.12rem .45rem;border-radius:3px;display:inline-block;margin-bottom:.75rem;">SPEC: 4.3.6 &#8212; 3d &#8212; World Bank, IMF, NGOs</p>
+
+    <h2>The World Bank</h2>
+    <div class="def-box"><strong>World Bank:</strong> International financial institution providing long-term loans, grants, and technical assistance to developing countries. Founded 1944 (Bretton Woods). Two main bodies: <strong>IBRD</strong> (International Bank for Reconstruction and Development &#8212; loans to middle-income countries at near-market rates) and <strong>IDA</strong> (International Development Association &#8212; concessional 0% interest loans and grants to the poorest 74 countries, 25&#8211;40 year repayment periods).</div>
+    <h3>What the World Bank Does</h3>
+    <ul>
+      <li><strong>Project finance:</strong> Long-term loans for infrastructure, agriculture, health, education, institutional reform &#8212; IDA is the largest single source of development finance for low-income countries</li>
+      <li><strong>Development policy lending:</strong> Budget support conditional on specific policy reforms &#8212; governance improvements, social protection expansion, fiscal reform</li>
+      <li><strong>Knowledge and data:</strong> World Development Report, World Development Indicators &#8212; most comprehensive global development dataset and annual policy analysis</li>
+      <li><strong>Debt relief:</strong> Participates in HIPC and MDRI debt cancellation programmes</li>
+      <li><strong>Technical assistance:</strong> Builds institutional capacity in tax policy, financial regulation, public financial management</li>
+    </ul>
+    <div class="pro-con">
+      <div class="pro"><strong>Benefits</strong><ul>
+        <li>IDA provides concessional finance unavailable from private markets for poorest countries</li>
+        <li>HIPC/MDRI debt relief freed ~$100bn in debt service</li>
+        <li>Produces critical development data and research</li>
+        <li>Technical assistance builds institutional capacity</li>
+        <li>Increasingly uses RCT evidence to design effective interventions</li>
+      </ul></div>
+      <div class="con"><strong>Criticisms</strong><ul>
+        <li>Structural adjustment conditionality imposed market-fundamentalist reforms harming development (Stiglitz 2002)</li>
+        <li>Governance: voting shares weighted by financial contribution &#8212; US has effective veto; rich country priorities dominate</li>
+        <li>Some infrastructure projects have caused negative social/environmental impacts (dam displacement, deforestation)</li>
+        <li>Bureaucratic &#8212; slow disbursement, complex requirements disadvantage low-capacity governments</li>
+      </ul></div>
+    </div>
+
+    <h2>The International Monetary Fund (IMF)</h2>
+    <div class="def-box"><strong>IMF:</strong> International organisation of 190 members providing short-term balance of payments support to prevent currency crises from destabilising the international financial system. Founded 1944 (Bretton Woods). Loans are conditional on macroeconomic adjustment: fiscal consolidation, monetary tightening, exchange rate adjustment, and structural reforms.</div>
+    <h3>IMF Functions</h3>
+    <ul>
+      <li><strong>Emergency BoP lending:</strong> Standby Arrangements and Extended Fund Facilities for countries facing currency crises &#8212; conditional on stabilisation programmes</li>
+      <li><strong>Concessional lending for LDCs:</strong> Poverty Reduction and Growth Trust (PRGT) &#8212; zero-interest loans to low-income countries with protracted BoP problems</li>
+      <li><strong>Surveillance:</strong> Annual Article IV consultations &#8212; reviews each member&#8217;s economic policies; IMF assessments influence bond market perceptions and investor confidence</li>
+      <li><strong>SDRs (Special Drawing Rights):</strong> International reserve asset &#8212; allocated to members to supplement official reserves during global liquidity crises. COVID-19: $650bn SDR allocation in August 2021 provided immediate liquidity support to all members.</li>
+      <li><strong>Technical assistance:</strong> Fiscal, monetary, and financial sector policy capacity-building</li>
+    </ul>
+    <div class="pro-con">
+      <div class="pro"><strong>Benefits</strong><ul>
+        <li>Lender of last resort: prevents currency crises from becoming full economic collapses</li>
+        <li>Conditionality enforces macroeconomic discipline that prevents fiscal profligacy</li>
+        <li>PRGT concessional lending for LDCs &#8212; provides BoP support unavailable elsewhere</li>
+        <li>SDR allocations: emergency liquidity without conditionality during global crises</li>
+        <li>Post-2008 reforms: more flexibility, acknowledged fiscal multiplier underestimation</li>
+      </ul></div>
+      <div class="con"><strong>Criticisms</strong><ul>
+        <li>Stiglitz (2002): conditionality imposed &#8220;market fundamentalism&#8221; &#8212; austerity deepened recessions in East Asia 1997 and Argentina 2001</li>
+        <li>Procyclical: demanded fiscal cuts during downturns &#8212; opposite of Keynesian prescription</li>
+        <li>Social impact: cuts to health/education subsidies hit poorest hardest</li>
+        <li>Governance: quota-based voting &#8212; US effective veto; agenda reflects rich country interests</li>
+        <li>&#8220;IMF stigma&#8221;: countries delay approaching IMF for fear of signalling weakness to financial markets</li>
+      </ul></div>
+    </div>
+    <p><strong>Key distinction to know:</strong> World Bank = <em>long-term development finance</em> (roads, schools, governance). IMF = <em>short-term BoP crisis management</em> (emergency lending to stabilise currencies). Both headquartered in Washington DC and both subject to rich-country governance dominance &#8212; the main institutional critique.</p>
+
+    <h2>Non-Governmental Organisations (NGOs)</h2>
+    <div class="def-box"><strong>NGO:</strong> A non-profit, voluntary organisation independent of government that works on development, humanitarian, or advocacy goals. Ranges from community organisations to global institutions (Oxfam, CARE, MSF, BRAC, GiveDirectly). In 2022, NGOs channelled approximately 15&#8211;20% of total ODA.</div>
+    <h3>Role of NGOs in Development</h3>
+    <ul>
+      <li><strong>Service delivery:</strong> Provide health, education, and social protection where government services are absent &#8212; MSF operates in conflict zones where governments cannot function</li>
+      <li><strong>Humanitarian response:</strong> First responders in crises &#8212; Oxfam, WFP, UNHCR coordinate emergency food, shelter, and healthcare</li>
+      <li><strong>Advocacy:</strong> Campaign for debt relief, fair trade, climate finance &#8212; Jubilee 2000 debt relief campaign was instrumental in creating the HIPC Initiative</li>
+      <li><strong>Microfinance and enterprise:</strong> Many NGOs operate microfinance and market linkage programmes for rural producers</li>
+      <li><strong>Research and evidence:</strong> GiveDirectly&#8217;s unconditional cash transfer RCTs; Oxfam&#8217;s inequality research; BRAC&#8217;s ultra-poor graduation model evidence</li>
+    </ul>
+    <div class="pro-con">
+      <div class="pro"><strong>Advantages</strong><ul>
+        <li>More flexible and innovative than government programmes &#8212; can pilot new approaches rapidly</li>
+        <li>Often more accountable to beneficiaries than remote aid agencies</li>
+        <li>Operate in difficult environments (conflict zones, remote areas) where governments cannot</li>
+        <li>BRAC (Bangladesh): world&#8217;s largest NGO &#8212; 100+ million beneficiaries in health, microfinance, education</li>
+        <li>GiveDirectly RCT evidence: unconditional cash transfers have robust positive development impact</li>
+      </ul></div>
+      <div class="con"><strong>Limitations</strong><ul>
+        <li>Not democratically elected or accountable to citizens &#8212; operate on donor priorities, not local needs</li>
+        <li>May undermine state capacity: parallel NGO services reduce government incentive to build its own systems</li>
+        <li>Fragmented: thousands of NGOs in same country create coordination failures and duplication of effort</li>
+        <li>Transaction costs: compliance with multiple donor requirements consumes scarce organisational resources</li>
+        <li>May impose Western cultural assumptions &#8212; external priorities on local communities without genuine participation</li>
+      </ul></div>
+    </div>
+    <div class="exam-tip">Examiner&#8217;s key distinction: the World Bank and IMF are often confused. World Bank = long-term development (20&#8211;40 year project loans); IMF = short-term BoP stabilisation (typically 3&#8211;5 year programme loans). For both: the primary criticism is that they are governed by rich countries (US effective veto), historically imposed pro-market conditionality without regard for social impacts, and have been slow to reform governance to give developing countries more voice. Cite Stiglitz (2002) <em>Globalisation and its Discontents</em> for the sharpest critique.</div>
+  </div>
+</div>
 <!-- ═══ PAST PAPERS ═══ -->
 <div class="section-block" id="past-papers">
   <div class="section-header" onclick="toggleSection(this)">
